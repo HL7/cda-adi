@@ -1,0 +1,89 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.cda.adi",
+  "url": "http://hl7.org/cda/hl7.cda.adi/ImplementationGuide/hl7.cda.adi",
+  "version": "0.1.0",
+  "name": "cdaadi",
+  "status": "draft",
+  "publisher": "Health Level Seven",
+  "contact": [
+    {
+      "name": "Health Level Seven",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/structure"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.cda.adi",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.cda.us.ccda",
+      "version": "3.0.0",
+      "uri": "http://hl7.org/cda/us/ccda/ImplementationGuide/hl7.cda.us.ccda",
+      "id": "hl7_cda_us_ccda"
+    },
+    {
+      "packageId": "hl7.cda.uv.core",
+      "version": "2.0.1-sd",
+      "uri": "http://hl7.org/cda/stds/core/ImplementationGuide/hl7.cda.uv.core",
+      "id": "hl7_cda_uv_core"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/PersonalAdvanceCarePlanDocument"
+        },
+        "name": "PersonalAdvanceCarePlanDocument",
+        "description": "A patient authored advance healthcare directive document.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/POLSTPortableMedicalOrdersDocument"
+        },
+        "name": "POLSTPortableMedicalOrdersDocument",
+        "description": "A provider authored advance healthcare directive document which \ncontains a source form document and also may include structured sections for machine\nprocessable representation of the patient's consent to appoint one or more healthcare agents. \nIt also may inlcude care experience and treatment intervention preferences so healthcare agents\nwill know the patients wishes should they need to make care decisions on the patient's behalf.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "generalGuidance.html",
+          "title": "General Guidance",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "path-history",
+        "value": "http://hl7.org/cda/hl7.cda.adi/history.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "outputFile": "StructureDefinition-POLSTPortableMedicalOrdersDocument.json",
+    "fshName": "POLSTPortableMedicalOrdersDocument",
+    "fshType": "Profile",
+    "fshFile": "documents/PolstPortableMedicalOrdersDocument.fsh",
+    "startLine": 5,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-PersonalAdvanceCarePlanDocument.json",
+    "fshName": "PersonalAdvanceCarePlanDocument",
+    "fshType": "Profile",
+    "fshFile": "documents/PersonalAdvanceCarePlanDocument.fsh",
+    "startLine": 4,
+    "endLine": 8
+  }
+]
