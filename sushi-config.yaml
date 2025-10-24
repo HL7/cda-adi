@@ -3,14 +3,14 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.cda.adi
-canonical: http://hl7.org/cda/hl7.cda.adi
-name: cda-adi
+id: hl7.cda.us.adi
+canonical: http://hl7.org/cda/hl7.cda.us.adi
+name: ADIforCDA
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
 version: 0.1.0
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -25,7 +25,7 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.cda.us.ccda: 3.0.0
+  hl7.cda.us.ccda: 4.0.0
   hl7.cda.uv.core: 2.0.1-sd
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -66,6 +66,9 @@ dependencies:
 # parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
+
+parameters:
+  pin-canonicals: pin-multiples
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │

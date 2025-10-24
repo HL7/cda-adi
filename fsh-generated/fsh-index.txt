@@ -1,3 +1,0 @@
-Output File                                                  Name                                Type     FSH File                                          Lines
-StructureDefinition-POLSTPortableMedicalOrdersDocument.json  POLSTPortableMedicalOrdersDocument  Profile  documents/PolstPortableMedicalOrdersDocument.fsh  5 - 13
-StructureDefinition-PersonalAdvanceCarePlanDocument.json     PersonalAdvanceCarePlanDocument     Profile  documents/PersonalAdvanceCarePlanDocument.fsh     4 - 8
