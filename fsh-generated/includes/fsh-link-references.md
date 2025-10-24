@@ -1,2 +1,0 @@
-[PersonalAdvanceCarePlanDocument]: StructureDefinition-PersonalAdvanceCarePlanDocument.html
-[POLSTPortableMedicalOrdersDocument]: StructureDefinition-POLSTPortableMedicalOrdersDocument.html

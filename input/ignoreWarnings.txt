@@ -1,2 +1,18 @@
-== Suppressed Messages Specific to CDA-ADI ==
-# Include Warnings or errors here.
+== Suppressed Messages ==
+
+# 01 Experimental and Draft Code systems from base FHIR
+Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+
+# 02 Version pinning messages
+Pinned the version of %
+
+# 03 Constraint inherited from C-CDA
+Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+
+# 04 Duplicate anchor ids produced by publisher - see if this can be fixed in a future release of the template
+The html source has duplicate anchor Ids:%
+
+# 30 This is a guide that uses FHIR v5 that references guides that are FHIR v4
+This IG is for FHIR version 5.0.0, while the package 'hl7.terminology#5.2.0' is for FHIR version 4.0.1
+This IG is for FHIR version 5.0.0, while the IG 'hl7.fhir.us.core#8.0.0' is for FHIR version 4.0.1
+This IG is for FHIR version 5.0.0, while the package 'hl7.fhir.uv.smart-app-launch#2.2.0' is for FHIR version 4.0.1
