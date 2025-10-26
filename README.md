@@ -10,7 +10,7 @@ US Realm Header  2.16.840.1.113883.10.20.22.1.1  2024-05-01
 
 
 
-## Personal Advance Care Plan Document
+## Physician Order for Life Sustaining Treatment Document
 ### Minimally Structured POLST Document 2.16.840.1.113883.9.275.2.1  2026-08-28
 Inherits from:  
 
