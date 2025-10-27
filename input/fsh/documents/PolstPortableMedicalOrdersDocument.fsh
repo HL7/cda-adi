@@ -11,3 +11,4 @@ It also may inlcude care experience and treatment intervention preferences so he
 will know the patients wishes should they need to make care decisions on the patient's behalf."
 
 * insert LogicalModelTemplate(polst-pmo, 2.16.840.1.113883.9.275.1, 2026-08-28)
+* insert DocumentCategory(Advance Healthcare Directives, 42348-3, Advance healthcare directives)
