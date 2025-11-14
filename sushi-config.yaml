@@ -27,6 +27,10 @@ publisher:
 dependencies:
   hl7.cda.us.ccda: 4.0.0
   hl7.cda.uv.core: 2.0.1-sd
+  hl7.terminology:
+    id: HL7Terminology
+    version: 6.5.0
+    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
@@ -69,6 +73,19 @@ dependencies:
 
 parameters:
   pin-canonicals: pin-multiples
+# see https://confluence.hl7.org/display/CDA/IG+Publisher+Basics+for+CDA+IG+Authors
+  path-resource:
+    - input/resources
+    - input/pagecontent
+    - fsh/aliasesAndRules
+    - fsh/codeSystems
+    - fsh/documents
+    - fsh/entries
+    - fsh/examples
+    - fsh/invariants
+    - fsh/namingSystems
+    - fsh/sections
+    - fsh/valueSets
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │

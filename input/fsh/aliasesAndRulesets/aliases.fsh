@@ -1,4 +1,11 @@
 Alias: $RFC = urn:ietf:rfc:3986
+//Common CodeSystems
+Alias: $sct = http://snomed.info/sct
+Alias: $ucum = http://unitsofmeasure.org
+Alias: $loinc = http://loinc.org
+Alias: $RxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias: $ICD10 = http://hl7.org/fhir/sid/icd-10
+Alias: $ICD10-CM = http://hl7.org/fhir/sid/icd-10-cm
 
 // CDA Types
 Alias: $Act = http://hl7.org/cda/stds/core/StructureDefinition/Act
@@ -165,3 +172,6 @@ Alias: $HSLOCCombined = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1
 Alias: $CMSPlaceOfService = http://terminology.hl7.org/ValueSet/CMSPlaceOfServiceCodes
 
 Alias: $1.3.6.1.4.1.12009.10.1.3932 =  http://loinc.org/vs/LL5052-7
+
+// ValueSets for cda-adi
+Alias: $AdvanceHealthcareDirectiveDocumentTypes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.41

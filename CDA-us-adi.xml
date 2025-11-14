@@ -5,7 +5,7 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/POLSTPortableMedicalOrdersDocument" key="StructureDefinition-POLSTPortableMedicalOrdersDocument" name="POLSTPortableMedicalOrdersDocument"/>
-<artifact id="StructureDefinition/PersonalAdvanceCarePlanDocument" key="StructureDefinition-PersonalAdvanceCarePlanDocument" name="PersonalAdvanceCarePlanDocument"/>
+<artifact id="StructureDefinition/PersonalACP" key="StructureDefinition-PersonalACP" name="Personal Advance Care Plan"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
