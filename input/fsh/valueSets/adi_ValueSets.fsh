@@ -25,6 +25,7 @@
 //* $sct#398700009   "Menarche" 
 //* $sct#250423000   "hCG+"
 
+// Example of using a value set that is already defined in VSAC, as is.  Review Aliases fsh file.
 
 // Example of using a valueset from a Profile or IG you are dependent upon.  This requires an explicit dependency to be defined in the sushiConfig.yaml file
 // In this approach, nothing goes in this valueSet file.

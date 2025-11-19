@@ -173,5 +173,26 @@ Alias: $CMSPlaceOfService = http://terminology.hl7.org/ValueSet/CMSPlaceOfServic
 
 Alias: $1.3.6.1.4.1.12009.10.1.3932 =  http://loinc.org/vs/LL5052-7
 
-// ValueSets for cda-adi
+// ValueSets for cda-adi - PACP
 Alias: $AdvanceHealthcareDirectiveDocumentTypes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.41
+Alias: $AdvanceDirectiveCategories = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.69.4
+Alias: $AdvanceHealthcareDirectiveDocumentTypesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.41
+Alias: $HealthcareAgentProxyChoices = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
+Alias: $HealthcareAgentOrdinality = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.12
+Alias: $HealthcareAgentPowersOrLimitationsIndicator = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.13
+Alias: $HealthcareAgentPowers = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.37
+Alias: $NoHealthcareAgentIncludedReason = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.2
+Alias: $PersonalAndLegalRelationshipRoleType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.12.1
+
+// ValueSets for cda-adi - POLST
+Alias: $CardiopulmonaryResuscitationProceduresGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31
+Alias: $CardiopulmonaryResuscitationOrderProcedures = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.30
+Alias: $CardiopulmonaryResuscitationOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.28
+Alias: $InitialTreatmentPortableMedicalOrderProceduresGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.33
+Alias: $AdditionalPortableMedicalOrderProcedures = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.32
+Alias: $InitialTreatmentPortableMedicalOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27
+Alias: $AdditionalPortableMedicalOrderProceduresGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.34
+Alias: $MedicallyAssistedNutritionOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.35
+Alias: $MedicallyAssistedNutritionPortableMedicalOrderProceduresGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.36
+Alias: $MedicallyAssistedNutritionOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.35
+//ValueSets for MedicallyAssistedHydration are not yet developed
