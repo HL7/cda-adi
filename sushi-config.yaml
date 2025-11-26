@@ -78,14 +78,14 @@ parameters:
     - input/resources
     - input/pagecontent
     - fsh/aliasesAndRules
-    - fsh/codeSystems
-    - fsh/documents
-    - fsh/entries
-    - fsh/examples
-    - fsh/invariants
     - fsh/namingSystems
-    - fsh/sections
+    - fsh/codeSystems
     - fsh/valueSets
+    - fsh/documents
+    - fsh/sections
+    - fsh/entries
+    - fsh/invariants
+    - fsh/examples 
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
