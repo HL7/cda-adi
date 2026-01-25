@@ -26,4 +26,30 @@ Optionally, the document may contain sections for form completion information wh
 """
 
 * insert LogicalModelTemplate(polst-pmo, 2.16.840.1.113883.9.275.1, 2026-08-28)
-* insert DocumentCategory(Advance Healthcare Directives, 42348-3, Advance healthcare directives)
+
+//* insert DocumentCategory(Advance Healthcare Directives, 42348-3, Advance healthcare directives)
+* sdtcCategory MS 
+* sdtcCategory ^slicing.discriminator[+].type = #value
+* sdtcCategory ^slicing.discriminator[=].path = "code"
+* sdtcCategory ^slicing.discriminator[+].type = #value
+* sdtcCategory ^slicing.discriminator[=].path = "codeSystem"
+* sdtcCategory ^slicing.rules = #open
+* sdtcCategory contains 
+     ahdDocumentClass 1..1 and
+     pacpDocumentClass 0..1 MS
+* sdtcCategory[ahdDocumentClass].code 1..1
+* sdtcCategory[ahdDocumentClass].code = $loinc#42348-3
+* sdtcCategory[ahdDocumentClass].code ^short = "Used to categorize the document type as an Advance Healthcare Directive"
+* sdtcCategory[ahdDocumentClass].codeSystem 1..1
+* sdtcCategory[ahdDocumentClass].codeSystem = "2.16.840.1.113883.6.1"
+* sdtcCategory[ahdDocumentClass].codeSystemName 1..1
+* sdtcCategory[ahdDocumentClass].codeSystemName = "LOINC"
+* sdtcCategory[ahdDocumentClass].displayName 1..1
+* sdtcCategory[pacpDocumentClass].code 1..1
+* sdtcCategory[pacpDocumentClass].code = $loinc#93037-0
+* sdtcCategory[pacpDocumentClass].code ^short = "Used to categorize the document type as a Provider Authored Advance Healthcare Directive"
+* sdtcCategory[pacpDocumentClass].codeSystem 1..1
+* sdtcCategory[pacpDocumentClass].codeSystem = "2.16.840.1.113883.6.1"
+* sdtcCategory[pacpDocumentClass].codeSystemName 1..1
+* sdtcCategory[pacpDocumentClass].codeSystemName = "LOINC"
+* sdtcCategory[pacpDocumentClass].displayName 1..1

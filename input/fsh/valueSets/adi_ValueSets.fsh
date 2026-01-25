@@ -1,3 +1,7 @@
+// Use this file for defining valueSets you need to make that are not already defined in VSAC or THO.
+//    Reference a locally defined valueSet by just using its name, i.e. Antepartum_Review_of_Systems_Menstrual_History_VS
+// Use the aliases.fsh file for existing valueSets
+
 // make a value set from other codeSystems and value sets defined elsewhere
 //This is the way to make a "grouper valueSet"
 //ValueSet:  Payer_Role_Codes_VS
@@ -10,6 +14,7 @@
 //* include codes from system http://snomed.info/sct
 
 // Example of making a value set with explicit enumerated codes
+// ValueSet naming best practices - use shorter and camelCase for naming.
 //ValueSet: Antepartum_Review_of_Systems_Menstrual_History_VS
 //Title: "Antepartum Review of Systems Menstrual History"
 //Description: "Antepartum Review of Systems Menstrual History This value set identifies the menstrual-history related observations that may inform the pregnancy care."
