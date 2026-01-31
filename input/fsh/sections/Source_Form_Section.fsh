@@ -33,7 +33,7 @@ This shall contain the binary object used to render the source form in it's orig
 * code.codeSystemName = "LOINC"
 
 * title 1..1
-* title = "Source Form Document" 
+* title ^short = "Source Form Document" 
 
 * text ^short = "Rendering of the Source Form Document and any additional entry data."
 

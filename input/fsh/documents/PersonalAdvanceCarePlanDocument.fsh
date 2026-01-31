@@ -31,8 +31,8 @@ Optionally, the document may contain sections for treatment intervention prefere
 // C-CDA uses a RuleSet * insert LogicalModelTemplate(personal-acp, 2.16.840.1.113883.4.823.1.1.1, 2026-08-28  We can't figure out how this works.)
 * templateId 3..*
 * templateId contains personal-acp 1..1
-* templateId [personal-acp].root = "2.16.840.1.113883.4.823.1.1.1"
-* templateId [personal-acp].extension = "2026-08-28"
+* templateId[personal-acp].root = "2.16.840.1.113883.4.823.1.1.1"
+* templateId[personal-acp].extension = "2026-08-28"
 
 * id ^comment = "This is the master identifier in a DocumentReference document indexing resource." 
 
@@ -100,14 +100,14 @@ The document always contains the source form in the Source Form section. It may 
 // This is the section level constraints within the document body.
 // It uses cardinality for SHALL 1..1,  SHOULD 0..1 MS, and  MAY 0..1   always put "and" at the end until the last one.
      source-form 1..1 and 
-     administrative-information 0..1 and
+     administrative-information 0..1 MS and
      healthcare-agent-appointment 1..1 and
-     care-experience-preferences 0..1 and
-     treatment-intervention-preferences 0..1 and
-     upon-death-preferences 0..1 and
-     witness-and-notary 0..1 and
-     completion-information 0..1 and
-     additional-documentation 0..1
+     care-experience-preferences 0..1 MS and
+     treatment-intervention-preferences 0..1 MS and
+     upon-death-preferences 0..1 MS and
+     witness-and-notary 0..1 MS and
+     completion-information 0..1 MS and
+     additional-documentation 0..1 MS
 
 // Source_Form_Section is the computable name of the Section template (defined separately)
 // What should be documented in the comment? use the conformance verbs to make your expectation clearer.
@@ -143,6 +143,6 @@ The document always contains the source form in the Source Form section. It may 
 * component.structuredBody.component[source-form].section ^short = "Requirements to complete a valid document"
 * component.structuredBody.component[source-form].section ^comment = "SHOULD contain 0..* Clause Observation Entry. SHOULD contain 0..1 Esignature ObservationMedia Entry where the id references the associated authenticator in the header."
 
-* component.structuredBody.component[source-form].section only Additional_documentation_Section
+* component.structuredBody.component[source-form].section only Additional_Documentation_Section
 * component.structuredBody.component[source-form].section ^short = "Information about additional relevant advance healthcare directive documents and where they can be accessed"
 * component.structuredBody.component[source-form].section ^comment = "SHOULD contain 0..* Advance Healthcare Directive Observation Entry."

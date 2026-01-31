@@ -26,6 +26,6 @@ This section contains information about additional relevant advance healthcare d
 * code.codeSystemName = "LOINC"
 
 * title 1..1
-* title = "Additional Documentation" 
+* title ^short = "Additional Documentation" 
 
 * text ^short = "Rendering of information about additional relevant documents"

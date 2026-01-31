@@ -26,6 +26,6 @@ This section contains the consent to appoint one or more healthcare agents and a
 * code.codeSystemName = "LOINC"
 
 * title 1..1
-* title = "Healthcare Agent Appointment" 
+* title ^short = "Healthcare Agent Appointment" 
 
 * text ^short = "Rendering of Healthcare Agent Appointment"

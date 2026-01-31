@@ -1,4 +1,4 @@
-Profile: Wittness_And_Notary_Section 
+Profile: Witness_And_Notary_Section 
 // $Section is an alias
 Parent: $Section
 Id: Witness.And.Notary.Section
@@ -26,6 +26,6 @@ This section contains the person's signature information with Witness and Notary
 * code.codeSystemName = "LOINC"
 
 * title 1..1
-* title = "Witness and Notary" 
+* title ^short = "Witness and Notary" 
 
 * text ^short = "Rendering of Person's signature with Witness and Notary information and signatures"

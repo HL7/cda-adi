@@ -26,6 +26,6 @@ This section contains care experience preferences expressed by the person which 
 * code.codeSystemName = "LOINC"
 
 * title 1..1
-* title = "Upon Death Preferences" 
+* title ^short = "Upon Death Preferences" 
 
 * text ^short = "Rendering of Upon Death Preferences information"

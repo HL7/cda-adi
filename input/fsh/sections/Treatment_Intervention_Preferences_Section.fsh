@@ -26,6 +26,6 @@ This section contains treatment intervention preferences under potential future 
 * code.codeSystemName = "LOINC"
 
 * title 1..1
-* title = "Treatment Intervention Preferences" 
+* title ^short = "Treatment Intervention Preferences" 
 
 * text ^short = "Rendering of Treatment Intervention Preferences information"

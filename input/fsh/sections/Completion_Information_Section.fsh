@@ -26,6 +26,6 @@ This section contains information about requirements to complete the document as
 * code.codeSystemName = "LOINC"
 
 * title 1..1
-* title = "Completion Information" 
+* title ^short = "Completion Information" 
 
 * text ^short = "Rendering of completion information"

@@ -1,10 +1,10 @@
-Profile: Care_Experience_Preferences_Section 
+Profile: Administrative_Information_Section 
 // $Section is an alias
 Parent: $Section
-Id: Care.Experience.Preferences.Section
-Title: "Care Experience Preferences Section"
+Id: Administrative.Information.Section
+Title: "Administrative Information Section"
 Description: """
-This section contains information about the person's expressed care experience preferences.
+This section contains information about additional administrative data.
 """
 * ^status = #draft
 
@@ -13,19 +13,19 @@ This section contains information about the person's expressed care experience p
 // Including the 1..* may cause a validation problem.
 * templateId 1..*
 * templateId.root 1..1 
-* templateId.root = "2.16.840.1.113883.4.823.1.3.6"
+* templateId.root = "2.16.840.1.113883.4.823.1.3.7"
 * templateId.extension 1..1 
 * templateId.extension = "2026-08-28"
 
 * code 1..1  
-* code ^short = "Care Experience Preferences Section"
+* code ^short = "Administrative Information Section"
 * code.code 1..1
-* code.code = $loinc#81338-6
+* code.code = $loinc#81381-6
 * code.codeSystem 1..1
 * code.codeSystem = "2.16.840.1.113883.6.1"
 * code.codeSystemName = "LOINC"
 
 * title 1..1
-* title ^short = "Care Experience Preferences" 
+* title ^short = "Administrative Information" 
 
-* text ^short = "Rendering of care experience preferences"
+* text ^short = "Rendering of administrative information"
