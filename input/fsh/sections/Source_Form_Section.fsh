@@ -40,19 +40,11 @@ This shall contain the binary object used to render the source form in it's orig
 //ANDREA - need more information on how to include various type of entries.
 //* entry ^slicing.discriminator[+].type = #profile
 //* entry ^slicing.discriminator[=].path = "act"
-//* entry ^slicing.discriminator[+].type = #profile
-//* entry ^slicing.discriminator[=].path = "observation"
-//* entry ^slicing.rules = #open
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "observationMedia"
+* entry ^slicing.rules = #open
 //* entry ^short = "If section/@nullFlavor is not present:"
-//* entry ^comment = "SHALL contain at least one [1..*] entry (CONF:1198-9183)"
-//* entry contains problem-Concern-Entry 1..* MS 
-//* entry[problem-Concern-Entry].act 1..1 MS 
-//* entry[problem-Concern-Entry].act only IHE_PCC_Concern_Entry
-
-
-
-//confirm if this entry is an act
-// Invariant: shall-source-form-entry-act
-// Description: "If section/@nullFlavor is not present, SHALL contain at least one source-form-entry-act"
-// * severity = #error
-// * expression = "nullFlavor.exists() or entry.where(act.hasTemplateIdOf('https://profiles.ihe.net/PCC/PSCc/StructureDefinition/Source_Form_Entry')).exists()"
+* entry ^comment = "SHALL contain at least one [1..*] entry."
+* entry contains sourceFormEntry 1..* MS 
+* entry[sourceFormEntry].observationMedia 1..1 MS 
+* entry[sourceFormEntry].observationMedia only Source_Form_Entry

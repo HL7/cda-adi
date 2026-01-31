@@ -7,6 +7,8 @@ Alias: $RxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $ICD10 = http://hl7.org/fhir/sid/icd-10
 Alias: $ICD10-CM = http://hl7.org/fhir/sid/icd-10-cm
 
+Alias: $mediaType = http://terminology.hl7.org/CodeSystem/v3-mediaType
+
 // CDA Types
 Alias: $Act = http://hl7.org/cda/stds/core/StructureDefinition/Act
 Alias: $Author = http://hl7.org/cda/stds/core/StructureDefinition/Author
@@ -24,6 +26,7 @@ Alias: $IVL-PQ = http://hl7.org/cda/stds/core/StructureDefinition/IVL-PQ
 Alias: $IVL-TS = http://hl7.org/cda/stds/core/StructureDefinition/IVL-TS
 Alias: $ManufacturedProduct = http://hl7.org/cda/stds/core/StructureDefinition/ManufacturedProduct
 Alias: $Observation = http://hl7.org/cda/stds/core/StructureDefinition/Observation
+Alias: $ObservationMedia = http://hl7.org/cda/stds/core/StructureDefinition/ObservationMedia
 Alias: $Organizer = http://hl7.org/cda/stds/core/StructureDefinition/Organizer
 Alias: $Participant1 = http://hl7.org/cda/stds/core/StructureDefinition/Participant1
 Alias: $ParticipantRole = http://hl7.org/cda/stds/core/StructureDefinition/ParticipantRole
@@ -172,6 +175,7 @@ Alias: $HSLOCCombined = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1
 Alias: $CMSPlaceOfService = http://terminology.hl7.org/ValueSet/CMSPlaceOfServiceCodes
 
 Alias: $1.3.6.1.4.1.12009.10.1.3932 =  http://loinc.org/vs/LL5052-7
+Alias: $States = http://terminology.hl7.org/7.0.1/ValueSet-USPS-State
 
 // ValueSets for cda-adi - PACP
 Alias: $AdvanceHealthcareDirectiveDocumentTypes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.41
