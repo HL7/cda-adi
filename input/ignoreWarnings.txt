@@ -12,7 +12,20 @@ Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (def
 # 04 Duplicate anchor ids produced by publisher - see if this can be fixed in a future release of the template
 The html source has duplicate anchor Ids:%
 
-# 30 This is a guide that uses FHIR v5 that references guides that are FHIR v4
+# 05 This is a guide that uses FHIR v5 that references guides that are FHIR v4
 This IG is for FHIR version 5.0.0, while the package 'hl7.terminology#5.2.0' is for FHIR version 4.0.1
 This IG is for FHIR version 5.0.0, while the IG 'hl7.fhir.us.core#8.0.0' is for FHIR version 4.0.1
+This IG is for FHIR version 5.0.0, while the package 'hl7.fhir.us.core#8.0.0' is for FHIR version 4.0.1
 This IG is for FHIR version 5.0.0, while the package 'hl7.fhir.uv.smart-app-launch#2.2.0' is for FHIR version 4.0.1
+
+# 06 Suppressed by CDA-core-sd: "We want to fix a bunch of coded fields."
+Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x] (fixed.exists().not())' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+
+# 07 Suppressed by CDA-core-sd: "CDA type names are all UpperCamelCase"
+Constraint failed: eld-20: 'The first component of the path should be UpperCamelCase. Additional components (following a '.') should be lowerCamelCase. If this syntax is not adhered to, code generation tools may be broken. Logical models may be less concerned about this implication. (path.matches('^[A-Za-z][A-Za-z0-9]{0,63}(\\.[a-z][A-Za-z0-9]{0,63}(\\[x])?)*$'))' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition)
+
+#08 This error can only be resolved by cda-core-sd
+The Extension 'http://hl7.org/fhir/tools/StructureDefinition/type-profile-style' definition allows for the types [code] but found type uri
+
+#09 CHECK WITH SDWG - 
+No definition could be found for URL value 'cda'
