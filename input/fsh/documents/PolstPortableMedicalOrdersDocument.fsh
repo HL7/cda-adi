@@ -22,7 +22,7 @@ The document includes a mandatory source form section to hold a pdf of the origi
 
 A PMO document may contain additional textual information from the source form that does not have corresponding encoded entries. In this case, the section.text element is populated without corresponding section.entry elements. For minimum required information, the information in the section.text element will include corresponding section.entry elements and will be linked using the test linking mechanism.
 
-Optionally, the document may contain sections for form completion information which includes the necessary signature information, administrative information, additional documentation, upon death information, healthcare agent appointment, and notary and witness information. 
+Optionally, the document may contain sections for form completion information which includes the necessary signature information, administrative information, additional documentation, upon death information, healthcare agent appointment, and notary and witness information.
 """
 
 * insert LogicalModelTemplate(polst-pmo, 2.16.840.1.113883.9.275.1, 2026-08-28)

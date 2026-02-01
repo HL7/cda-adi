@@ -23,7 +23,7 @@ This entry includes the person's consent to appoint a Healthcare Agent. It may i
 * code.code = $loinc#81377-4
 
 * text 1..1 
-* text ^short = "links to the rendering of consent"
+* text ^short = "links to the rendering of the healthcare agent consent"
 
 * statusCode 1..1
 //* statusCode = $ActStatusCode#completed
@@ -37,7 +37,8 @@ This entry includes the person's consent to appoint a Healthcare Agent. It may i
 * entryRelationship contains 
     agent-appointment-part  1..3 MS and
     powers-granted-part 0..* MS and
-    powers-denied-part 0..*
+    coded-powers-granted-part 0..* MS and
+    powers-denied-part 0..* MS
 
 * entryRelationship[agent-appointment-part].typeCode = #COMP (exactly)
 * entryRelationship[agent-appointment-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
@@ -51,11 +52,17 @@ This entry includes the person's consent to appoint a Healthcare Agent. It may i
 * entryRelationship[powers-granted-part].observation 1..1 MS 
 * entryRelationship[powers-granted-part].observation only Powers_Granted_Part
 
-* entryRelationship[powers-granted-part].typeCode = #COMP (exactly)
-* entryRelationship[powers-granted-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
-* entryRelationship[powers-granted-part].inversionInd = false (exactly)
-* entryRelationship[powers-granted-part].observation 1..1 MS 
-* entryRelationship[powers-granted-part].observation only Powers_Denied_Part
+* entryRelationship[coded-powers-granted-part].typeCode = #COMP (exactly)
+* entryRelationship[coded-powers-granted-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
+* entryRelationship[coded-powers-granted-part].inversionInd = false (exactly)
+* entryRelationship[coded-powers-granted-part].observation 1..1 MS 
+* entryRelationship[coded-powers-granted-part].observation only Coded_Powers_Granted_Part
+
+* entryRelationship[powers-denied-part].typeCode = #COMP (exactly)
+* entryRelationship[powers-denied-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
+* entryRelationship[powers-denied-part].inversionInd = false (exactly)
+* entryRelationship[powers-denied-part].observation 1..1 MS 
+* entryRelationship[powers-denied-part].observation only Powers_Denied_Part
 
 
 Profile: Agent_Appointment_Part
@@ -71,7 +78,7 @@ This entry part includes the info about who was apointed a healthcare agent and 
 
 * code.code from $HealthcareAgentProxyChoices (required)
 
-* text ^short = "links to the rendering of Healthcare Agent"
+* text ^short = "links to the rendering of a participating Healthcare Agent"
 
 * participant 1..1
 //TO DO need a variant to limit this to two codes, one for if confirmed and one for if not confirmed.
@@ -102,11 +109,32 @@ This entry part includes powers granted.
 //TO DO: confirm if we have a better loinc code for Form Title
 * code.code = $loinc#75786-4
 
-* text ^short = "links to the rendering of Healthcare Agent"
+* text ^short = "links to the rendering of Healthcare Agent powers"
 
 * value 1..*
 * value only $ED
 * value ^short = "Granted powers"
+
+Profile: Coded_Powers_Granted_Part
+Parent: $Observation
+Id: Coded.Powers.Granted.Part
+Title: "Coded Powers Granted Part of the ADI Healthcare Agent Consent Entry"
+Description: """
+This entry part includes powers granted which are specific coded concepts.
+"""
+//* ^identifier.system = "urn:ietf:rfc:3986"
+//* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
+* ^status = #draft
+
+//TO DO: confirm if we have a better loinc code for Form Title
+* code.code = $loinc#75786-4
+
+* text ^short = "links to the rendering of a coded Healthcare Agent power"
+
+* value 1..1 
+* value only $CD
+* value ^short = "Coded power granted"
+* value.code from $HealthcareAgentPowers (extensible)
 
 Profile: Powers_Denied_Part
 Parent: $Observation
