@@ -35,7 +35,7 @@ Optionally, the document may contain sections for form completion information wh
 * sdtcCategory ^slicing.discriminator[=].path = "codeSystem"
 * sdtcCategory ^slicing.rules = #open
 * sdtcCategory contains 
-     ahdDocumentClass 1..1 and
+     ahdDocumentClass 1..1 MS and
      pacpDocumentClass 0..1 MS
 * sdtcCategory[ahdDocumentClass].code 1..1
 * sdtcCategory[ahdDocumentClass].code = $loinc#42348-3

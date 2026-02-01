@@ -19,7 +19,7 @@ If the form is copyrighted by an organization, the organization's name may be in
 // * moodCode ^comment = "SHALL contain exactly one [1..1] @moodCode=\"EVN\" Event (CodeSystem: HL7ActMood urn:oid:2.16.840.1.113883.5.1001 STATIC) (CONF:1198-9025)."
 
 * id 1..*
-* id ^comment = "MUST contain at least one [1..*] id (CONF:1198-9026)."
+* id ^comment = "MUST contain at least one [1..*] id."
 
 * value.mediaType 1..1
 * value.mediaType = $mediaType#application/pdf
@@ -76,8 +76,7 @@ This entry part includes the form title.
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 * ^status = #draft
 
-//TO DO: confirm if we have a better loinc code for Form Title
-* code.code = $loinc#42348-3
+* code.code = $loinc#92183-3
 
 * value 1..*
 * value only $ED

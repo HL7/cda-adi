@@ -44,7 +44,7 @@ Optionally, the document may contain sections for treatment intervention prefere
 * sdtcCategory ^slicing.discriminator[=].path = "codeSystem"
 * sdtcCategory ^slicing.rules = #open
 * sdtcCategory contains 
-     ahdDocumentClass 1..1 and
+     ahdDocumentClass 1..1 MS and
      pacpDocumentClass 0..1 MS
 * sdtcCategory[ahdDocumentClass].code 1..1
 * sdtcCategory[ahdDocumentClass].code = $loinc#42348-3
@@ -99,9 +99,9 @@ The document always contains the source form in the Source Form section. It may 
 * component.structuredBody.component contains 
 // This is the section level constraints within the document body.
 // It uses cardinality for SHALL 1..1,  SHOULD 0..1 MS, and  MAY 0..1   always put "and" at the end until the last one.
-     source-form 1..1 and 
+     source-form 1..1 MS and 
      administrative-information 0..1 MS and
-     healthcare-agent-appointment 1..1 and
+     healthcare-agent-appointment 1..1 MS and
      care-experience-preferences 0..1 MS and
      treatment-intervention-preferences 0..1 MS and
      upon-death-preferences 0..1 MS and

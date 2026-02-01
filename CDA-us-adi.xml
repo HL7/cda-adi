@@ -4,8 +4,24 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/Healthcare.Agent.Consent.Entry" key="StructureDefinition-Healthcare.Agent.Consent.Entry" name="ADI Healthcare Agent Consent Entry"/>
+<artifact id="StructureDefinition/Source.Form.Entry" key="StructureDefinition-Source.Form.Entry" name="ADI Source Form Entry"/>
+<artifact id="StructureDefinition/Additional.Documentation.Section" key="StructureDefinition-Additional.Documentation.Section" name="Additional Documentation Section"/>
+<artifact id="StructureDefinition/Administrative.Information.Section" key="StructureDefinition-Administrative.Information.Section" name="Administrative Information Section"/>
+<artifact id="StructureDefinition/Agent.Appointment.Part" key="StructureDefinition-Agent.Appointment.Part" name="Agent Appointment Part of the ADI Healthcare Agent Consent Entry"/>
+<artifact id="StructureDefinition/Care.Experience.Preferences.Section" key="StructureDefinition-Care.Experience.Preferences.Section" name="Care Experience Preferences Section"/>
+<artifact id="StructureDefinition/Completion.Information.Section" key="StructureDefinition-Completion.Information.Section" name="Completion Information Section"/>
+<artifact id="StructureDefinition/Form.Title.Part" key="StructureDefinition-Form.Title.Part" name="Form Title Part of the ADI Source Form Entry"/>
+<artifact id="StructureDefinition/Healthcare.Agent.Appointment.Section" key="StructureDefinition-Healthcare.Agent.Appointment.Section" name="Healthcare Agent Appointment Section"/>
+<artifact id="StructureDefinition/Jurisdiction.Part" key="StructureDefinition-Jurisdiction.Part" name="Jurisdiction Part of the ADI Source Form Entry"/>
 <artifact id="StructureDefinition/POLSTPortableMedicalOrdersDocument" key="StructureDefinition-POLSTPortableMedicalOrdersDocument" name="POLSTPortableMedicalOrdersDocument"/>
 <artifact id="StructureDefinition/PersonalACP" key="StructureDefinition-PersonalACP" name="Personal Advance Care Plan"/>
+<artifact id="StructureDefinition/Powers.Denied.Part" key="StructureDefinition-Powers.Denied.Part" name="Powers Denied Part of the ADI Healthcare Agent Consent Entry"/>
+<artifact id="StructureDefinition/Powers.Granted.Part" key="StructureDefinition-Powers.Granted.Part" name="Powers Granted Part of the ADI Healthcare Agent Consent Entry"/>
+<artifact id="StructureDefinition/Source.Form.Section" key="StructureDefinition-Source.Form.Section" name="Source Form Section"/>
+<artifact id="StructureDefinition/Treatment.Intervention.Preferences.Section" key="StructureDefinition-Treatment.Intervention.Preferences.Section" name="Treatment Intervention Preferences Section"/>
+<artifact id="StructureDefinition/Upon.Death.Preferences.Section" key="StructureDefinition-Upon.Death.Preferences.Section" name="Upon Death Preferences Section"/>
+<artifact id="StructureDefinition/Witness.And.Notary.Section" key="StructureDefinition-Witness.And.Notary.Section" name="Witness And Notary Section"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

@@ -8,6 +8,8 @@ Alias: $ICD10 = http://hl7.org/fhir/sid/icd-10
 Alias: $ICD10-CM = http://hl7.org/fhir/sid/icd-10-cm
 
 Alias: $mediaType = http://terminology.hl7.org/CodeSystem/v3-mediaType
+Alias: $RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass
+Alias: $ActStatusCode = http://terminology.hl7.org/CodeSystem/v3-ActStatus
 
 // CDA Types
 Alias: $Act = http://hl7.org/cda/stds/core/StructureDefinition/Act
@@ -175,7 +177,8 @@ Alias: $HSLOCCombined = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1
 Alias: $CMSPlaceOfService = http://terminology.hl7.org/ValueSet/CMSPlaceOfServiceCodes
 
 Alias: $1.3.6.1.4.1.12009.10.1.3932 =  http://loinc.org/vs/LL5052-7
-Alias: $States = http://terminology.hl7.org/7.0.1/ValueSet-USPS-State
+Alias: $States = http://terminology.hl7.org/ValueSet/USPS-State
+
 
 // ValueSets for cda-adi - PACP
 Alias: $AdvanceHealthcareDirectiveDocumentTypes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.41

@@ -37,7 +37,6 @@ This shall contain the binary object used to render the source form in it's orig
 
 * text ^short = "Rendering of the Source Form Document and any additional entry data."
 
-//ANDREA - need more information on how to include various type of entries.
 //* entry ^slicing.discriminator[+].type = #profile
 //* entry ^slicing.discriminator[=].path = "act"
 * entry ^slicing.discriminator[+].type = #profile
