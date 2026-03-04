@@ -70,11 +70,14 @@ Parent: $Observation
 Id: Agent.Appointment.Part
 Title: "Agent Appointment Part of the ADI Healthcare Agent Consent Entry"
 Description: """
-This entry part includes the info about who was apointed a healthcare agent and their ordinal role.
+Sub-part of the ADI Healthcare Agent Consent Entry. This entry part includes the info about who was apointed a healthcare agent and their ordinal role. 
+This entry is not intended to be used as a complete clinical statement entry on its own.
 """
 //* ^identifier.system = "urn:ietf:rfc:3986"
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 * ^status = #draft
+
+* insert LogicalModelTemplate(agent-appointment-part, 2.16.840.1.113883.4.823.1.4.2.1, 2026-08-28)
 
 * code.code from $HealthcareAgentProxyChoices (required)
 
@@ -100,11 +103,14 @@ Parent: $Observation
 Id: Powers.Granted.Part
 Title: "Powers Granted Part of the ADI Healthcare Agent Consent Entry"
 Description: """
-This entry part includes powers granted.
+Sub-part of the ADI Healthcare Agent Consent Entry. This entry part includes powers granted.
+This entry is not intended to be used as a complete clinical statement entry on its own.
 """
 //* ^identifier.system = "urn:ietf:rfc:3986"
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 * ^status = #draft
+
+* insert LogicalModelTemplate(powers-granted-part, 2.16.840.1.113883.4.823.1.4.2.2, 2026-08-28)
 
 //TO DO: confirm if we have a better loinc code for Form Title
 * code.code = $loinc#75786-4
@@ -120,11 +126,14 @@ Parent: $Observation
 Id: Coded.Powers.Granted.Part
 Title: "Coded Powers Granted Part of the ADI Healthcare Agent Consent Entry"
 Description: """
-This entry part includes powers granted which are specific coded concepts.
+Sub-part of the ADI Healthcare Agent Consent Entry. This entry part includes powers granted which are specific coded concepts.
+This entry is not intended to be used as a complete clinical statement entry on its own.
 """
 //* ^identifier.system = "urn:ietf:rfc:3986"
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 * ^status = #draft
+
+* insert LogicalModelTemplate(coded-powers-granted-part, 2.16.840.1.113883.4.823.1.4.2.3, 2026-08-28)
 
 //TO DO: confirm if we have a better loinc code for Form Title
 * code.code = $loinc#75786-4
@@ -141,11 +150,14 @@ Parent: $Observation
 Id: Powers.Denied.Part
 Title: "Powers Denied Part of the ADI Healthcare Agent Consent Entry"
 Description: """
-This entry part includes powers denied.
+Sub-part of the ADI Healthcare Agent Consent Entry. This entry part includes powers denied.
+This entry is not intended to be used as a complete clinical statement entry on its own.
 """
 //* ^identifier.system = "urn:ietf:rfc:3986"
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 * ^status = #draft
+
+* insert LogicalModelTemplate(powers-denied-part, 2.16.840.1.113883.4.823.1.4.2.4, 2026-08-28)
 
 //TO DO: confirm if we have a better loinc code for Form Title
 * code.code = $loinc#81346-9

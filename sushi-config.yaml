@@ -25,12 +25,19 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.cda.us.ccda: 4.0.0
-  hl7.cda.uv.core: 2.0.1-sd
+  hl7.cda.uv.core:
+    id: ClinicalDocumentArchitecture
+    version: 2.0.2-sd
+    uri: http://hl7.org/cda/stds/core/ImplementationGuide/hl7.cda.uv.core
   hl7.terminology:
     id: HL7Terminology
     version: 6.5.0
     uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+# Dependency on corrections to the Advance Directive Existence and Advance Directive Observation Templates introduced in C-CDA version 5.0.0
+  hl7.cda.us.ccda:
+    id: CCDA
+    version: 5.0.0-ballot
+    uri: http://hl7.org/cda/us/ccda/ImplementationGuide/hl7.cda.us.ccda
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode

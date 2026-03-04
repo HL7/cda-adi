@@ -4,7 +4,7 @@ Parent: $Section
 Id: Source.Form.Section
 Title: "Source Form Section"
 Description: """
-This shall contain the binary object used to render the source form in it's original format with completion signatures, etc.
+This section shall contain the binary object used to render the source form in it's original format with completion signatures, etc.
 """
 * ^status = #draft
 

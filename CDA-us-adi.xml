@@ -10,6 +10,7 @@
 <artifact id="StructureDefinition/Administrative.Information.Section" key="StructureDefinition-Administrative.Information.Section" name="Administrative Information Section"/>
 <artifact id="StructureDefinition/Agent.Appointment.Part" key="StructureDefinition-Agent.Appointment.Part" name="Agent Appointment Part of the ADI Healthcare Agent Consent Entry"/>
 <artifact id="StructureDefinition/Care.Experience.Preferences.Section" key="StructureDefinition-Care.Experience.Preferences.Section" name="Care Experience Preferences Section"/>
+<artifact id="StructureDefinition/Coded.Powers.Granted.Part" key="StructureDefinition-Coded.Powers.Granted.Part" name="Coded Powers Granted Part of the ADI Healthcare Agent Consent Entry"/>
 <artifact id="StructureDefinition/Completion.Information.Section" key="StructureDefinition-Completion.Information.Section" name="Completion Information Section"/>
 <artifact id="StructureDefinition/Form.Title.Part" key="StructureDefinition-Form.Title.Part" name="Form Title Part of the ADI Source Form Entry"/>
 <artifact id="StructureDefinition/Healthcare.Agent.Appointment.Section" key="StructureDefinition-Healthcare.Agent.Appointment.Section" name="Healthcare Agent Appointment Section"/>

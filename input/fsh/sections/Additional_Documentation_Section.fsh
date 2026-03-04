@@ -29,3 +29,14 @@ This section contains information about additional relevant advance healthcare d
 * title ^short = "Additional Documentation" 
 
 * text ^short = "Rendering of information about additional relevant documents"
+
+//* entry ^slicing.discriminator[+].type = #profile
+//* entry ^slicing.discriminator[=].path = "act"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "observation"
+* entry ^slicing.rules = #open
+//* entry ^short = "If section/@nullFlavor is not present:"
+* entry ^comment = "SHALL contain at least one [1..*] entry."
+* entry contains advanceDirectiveExists 1..* MS 
+* entry[advanceDirectiveExists].observation 1..1 MS 
+* entry[advanceDirectiveExists].observation only AdvanceDirectiveExistenceObservation

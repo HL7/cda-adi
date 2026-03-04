@@ -53,11 +53,14 @@ Parent: $Observation
 Id: Jurisdiction.Part
 Title: "Jurisdiction Part of the ADI Source Form Entry"
 Description: """
-This entry part includes the info about the jurisdiction for the form.
+Sub-part of the ADI Source Form Entry. This entry part includes the info about the jurisdiction for the form.
+This entry is not intended to be used as a complete clinical statement entry on its own.
 """
 //* ^identifier.system = "urn:ietf:rfc:3986"
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 * ^status = #draft
+
+* insert LogicalModelTemplate(jurisdiction-part, 2.16.840.1.113883.4.823.1.4.24.1, 2026-08-28)
 
 * code.code = $loinc#101349-9
 
@@ -70,11 +73,14 @@ Parent: $Observation
 Id: Form.Title.Part
 Title: "Form Title Part of the ADI Source Form Entry"
 Description: """
-This entry part includes the form title.
+Sub-part of the ADI Source Form Entry. This entry part includes the form title.
+This entry is not intended to be used as a complete clinical statement entry on its own.
 """
 //* ^identifier.system = "urn:ietf:rfc:3986"
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 * ^status = #draft
+
+* insert LogicalModelTemplate(form-title-part, 2.16.840.1.113883.4.823.1.4.24.2, 2026-08-28)
 
 * code.code = $loinc#92183-3
 
