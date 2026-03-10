@@ -1,5 +1,6 @@
 # cda-adi
 Repo established to house the new CDA IG in SD format. This CDA IG will be built with IG Publisher.
+The build site for this IG is [here](https://build.fhir.org/ig/HL7/cda-adi/).
 ## Personal Advance Care Plan Document
 ### Minimally Structured PACP Document 2.16.840.1.113883.4.823.1.1.1  2026-08-28
 **Inherits from:**  
