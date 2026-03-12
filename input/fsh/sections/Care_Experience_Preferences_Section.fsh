@@ -1,7 +1,7 @@
 Profile: Care_Experience_Preferences_Section 
 // $Section is an alias
 Parent: $Section
-Id: Care.Experience.Preferences.Section
+Id: CareExperiencePreferencesSection
 Title: "Care Experience Preferences Section"
 Description: """
 This section contains information about the person's expressed care experience preferences.

@@ -1,6 +1,6 @@
 Profile: Healthcare_Agent_Consent_Entry
 Parent: $Act
-Id: Healthcare.Agent.Consent.Entry
+Id: HealthcareAgentConsentEntry
 Title: "ADI Healthcare Agent Consent Entry"
 Description: """
 This entry includes the person's consent to appoint a Healthcare Agent. It may include powers granted or denied.
@@ -67,7 +67,7 @@ This entry includes the person's consent to appoint a Healthcare Agent. It may i
 
 Profile: Agent_Appointment_Part
 Parent: $Observation
-Id: Agent.Appointment.Part
+Id: AgentAppointmentPart
 Title: "Agent Appointment Part of the ADI Healthcare Agent Consent Entry"
 Description: """
 Sub-part of the ADI Healthcare Agent Consent Entry. This entry part includes the info about who was apointed a healthcare agent and their ordinal role. 
@@ -97,10 +97,9 @@ This entry is not intended to be used as a complete clinical statement entry on 
 * participant.participantRole.playingEntity.name MS
 
 
-
 Profile: Powers_Granted_Part
 Parent: $Observation
-Id: Powers.Granted.Part
+Id: PowersGrantedPart
 Title: "Powers Granted Part of the ADI Healthcare Agent Consent Entry"
 Description: """
 Sub-part of the ADI Healthcare Agent Consent Entry. This entry part includes powers granted.
@@ -121,9 +120,10 @@ This entry is not intended to be used as a complete clinical statement entry on 
 * value only $ED
 * value ^short = "Granted powers"
 
+
 Profile: Coded_Powers_Granted_Part
 Parent: $Observation
-Id: Coded.Powers.Granted.Part
+Id: CodedPowersGrantedPart
 Title: "Coded Powers Granted Part of the ADI Healthcare Agent Consent Entry"
 Description: """
 Sub-part of the ADI Healthcare Agent Consent Entry. This entry part includes powers granted which are specific coded concepts.
@@ -145,9 +145,10 @@ This entry is not intended to be used as a complete clinical statement entry on 
 * value ^short = "Coded power granted"
 * value.code from $HealthcareAgentPowers (extensible)
 
+
 Profile: Powers_Denied_Part
 Parent: $Observation
-Id: Powers.Denied.Part
+Id: PowersDeniedPart
 Title: "Powers Denied Part of the ADI Healthcare Agent Consent Entry"
 Description: """
 Sub-part of the ADI Healthcare Agent Consent Entry. This entry part includes powers denied.

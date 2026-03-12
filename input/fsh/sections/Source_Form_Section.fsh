@@ -1,7 +1,7 @@
 Profile: Source_Form_Section 
 // $Section is an alias
 Parent: $Section
-Id: Source.Form.Section
+Id: SourceFormSection
 Title: "Source Form Section"
 Description: """
 This section shall contain the binary object used to render the source form in it's original format with completion signatures, etc.

@@ -1,7 +1,7 @@
 Profile: Additional_Documentation_Section 
 // $Section is an alias
 Parent: $Section
-Id: Additional.Documentation.Section
+Id: AdditionalDocumentationSection
 Title: "Additional Documentation Section"
 Description: """
 This section contains information about additional relevant advance healthcare directive documents.

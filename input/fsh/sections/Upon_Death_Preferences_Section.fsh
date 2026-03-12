@@ -1,7 +1,7 @@
 Profile: Upon_Death_Preferences_Section 
 // $Section is an alias
 Parent: $Section
-Id: Upon.Death.Preferences.Section
+Id: UponDeathPreferencesSection
 Title: "Upon Death Preferences Section"
 Description: """
 This section contains care experience preferences expressed by the person which address what they want to have happen after their death.

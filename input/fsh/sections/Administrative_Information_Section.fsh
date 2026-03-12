@@ -1,7 +1,7 @@
 Profile: Administrative_Information_Section 
 // $Section is an alias
 Parent: $Section
-Id: Administrative.Information.Section
+Id: AdministrativeInformationSection
 Title: "Administrative Information Section"
 Description: """
 This section contains information about additional administrative data.

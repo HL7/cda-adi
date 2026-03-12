@@ -1,7 +1,7 @@
 Profile: Witness_And_Notary_Section 
 // $Section is an alias
 Parent: $Section
-Id: Witness.And.Notary.Section
+Id: WitnessAndNotarySection
 Title: "Witness And Notary Section"
 Description: """
 This section contains the person's signature information with Witness and Notary information.

@@ -1,7 +1,7 @@
 Profile: Completion_Information_Section 
 // $Section is an alias
 Parent: $Section
-Id: Completion.Information.Section
+Id: CompletionInformationSection
 Title: "Completion Information Section"
 Description: """
 This section contains information about requirements to complete the document as a valid form.

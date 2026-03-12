@@ -4,25 +4,37 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/Healthcare.Agent.Consent.Entry" key="StructureDefinition-Healthcare.Agent.Consent.Entry" name="ADI Healthcare Agent Consent Entry"/>
+<artifact id="StructureDefinition/HealthcareAgentConsentEntry" key="StructureDefinition-HealthcareAgentConsentEntry" name="ADI Healthcare Agent Consent Entry"/>
 <artifact id="StructureDefinition/Source.Form.Entry" key="StructureDefinition-Source.Form.Entry" name="ADI Source Form Entry"/>
-<artifact id="StructureDefinition/Additional.Documentation.Section" key="StructureDefinition-Additional.Documentation.Section" name="Additional Documentation Section"/>
-<artifact id="StructureDefinition/Administrative.Information.Section" key="StructureDefinition-Administrative.Information.Section" name="Administrative Information Section"/>
-<artifact id="StructureDefinition/Agent.Appointment.Part" key="StructureDefinition-Agent.Appointment.Part" name="Agent Appointment Part of the ADI Healthcare Agent Consent Entry"/>
-<artifact id="StructureDefinition/Care.Experience.Preferences.Section" key="StructureDefinition-Care.Experience.Preferences.Section" name="Care Experience Preferences Section"/>
-<artifact id="StructureDefinition/Coded.Powers.Granted.Part" key="StructureDefinition-Coded.Powers.Granted.Part" name="Coded Powers Granted Part of the ADI Healthcare Agent Consent Entry"/>
-<artifact id="StructureDefinition/Completion.Information.Section" key="StructureDefinition-Completion.Information.Section" name="Completion Information Section"/>
+<artifact id="StructureDefinition/AdditionalDocumentationSection" key="StructureDefinition-AdditionalDocumentationSection" name="Additional Documentation Section"/>
+<artifact id="StructureDefinition/AdditionalOrderEntry" key="StructureDefinition-AdditionalOrderEntry" name="Additional Order Entry"/>
+<artifact id="StructureDefinition/AdditionalOrderProcedurePart" key="StructureDefinition-AdditionalOrderProcedurePart" name="Additional Order Procedure Information"/>
+<artifact id="StructureDefinition/AdministrativeInformationSection" key="StructureDefinition-AdministrativeInformationSection" name="Administrative Information Section"/>
+<artifact id="StructureDefinition/AgentAppointmentPart" key="StructureDefinition-AgentAppointmentPart" name="Agent Appointment Part of the ADI Healthcare Agent Consent Entry"/>
+<artifact id="StructureDefinition/CPROrderDetailPart" key="StructureDefinition-CPROrderDetailPart" name="CPR Order Detail"/>
+<artifact id="StructureDefinition/CPRProcedurePart" key="StructureDefinition-CPRProcedurePart" name="CPR Procedure Information"/>
+<artifact id="StructureDefinition/CardiopulmonaryResuscitationOrderEntry" key="StructureDefinition-CardiopulmonaryResuscitationOrderEntry" name="Cardiopulmonary Resuscitation Order Entry"/>
+<artifact id="StructureDefinition/CareExperiencePreferencesSection" key="StructureDefinition-CareExperiencePreferencesSection" name="Care Experience Preferences Section"/>
+<artifact id="StructureDefinition/CodedPowersGrantedPart" key="StructureDefinition-CodedPowersGrantedPart" name="Coded Powers Granted Part of the ADI Healthcare Agent Consent Entry"/>
+<artifact id="StructureDefinition/CompletionInformationSection" key="StructureDefinition-CompletionInformationSection" name="Completion Information Section"/>
 <artifact id="StructureDefinition/Form.Title.Part" key="StructureDefinition-Form.Title.Part" name="Form Title Part of the ADI Source Form Entry"/>
-<artifact id="StructureDefinition/Healthcare.Agent.Appointment.Section" key="StructureDefinition-Healthcare.Agent.Appointment.Section" name="Healthcare Agent Appointment Section"/>
+<artifact id="StructureDefinition/HealthcareAgentAppointmentSection" key="StructureDefinition-HealthcareAgentAppointmentSection" name="Healthcare Agent Appointment Section"/>
+<artifact id="StructureDefinition/InitialTreatmentOrderDetailPart" key="StructureDefinition-InitialTreatmentOrderDetailPart" name="Initial Treatment Order Detail"/>
+<artifact id="StructureDefinition/InitialTreatmentOrderEntry" key="StructureDefinition-InitialTreatmentOrderEntry" name="Initial Treatment Order Entry"/>
+<artifact id="StructureDefinition/InitialTreatmentProcedurePart" key="StructureDefinition-InitialTreatmentProcedurePart" name="Initial Treatment Procedure Information"/>
 <artifact id="StructureDefinition/Jurisdiction.Part" key="StructureDefinition-Jurisdiction.Part" name="Jurisdiction Part of the ADI Source Form Entry"/>
-<artifact id="StructureDefinition/POLSTPortableMedicalOrdersDocument" key="StructureDefinition-POLSTPortableMedicalOrdersDocument" name="POLSTPortableMedicalOrdersDocument"/>
-<artifact id="StructureDefinition/PersonalACP" key="StructureDefinition-PersonalACP" name="Personal Advance Care Plan"/>
-<artifact id="StructureDefinition/Powers.Denied.Part" key="StructureDefinition-Powers.Denied.Part" name="Powers Denied Part of the ADI Healthcare Agent Consent Entry"/>
-<artifact id="StructureDefinition/Powers.Granted.Part" key="StructureDefinition-Powers.Granted.Part" name="Powers Granted Part of the ADI Healthcare Agent Consent Entry"/>
-<artifact id="StructureDefinition/Source.Form.Section" key="StructureDefinition-Source.Form.Section" name="Source Form Section"/>
-<artifact id="StructureDefinition/Treatment.Intervention.Preferences.Section" key="StructureDefinition-Treatment.Intervention.Preferences.Section" name="Treatment Intervention Preferences Section"/>
-<artifact id="StructureDefinition/Upon.Death.Preferences.Section" key="StructureDefinition-Upon.Death.Preferences.Section" name="Upon Death Preferences Section"/>
-<artifact id="StructureDefinition/Witness.And.Notary.Section" key="StructureDefinition-Witness.And.Notary.Section" name="Witness And Notary Section"/>
+<artifact id="StructureDefinition/MedicallyAssistedNutritionOrderDetailPart" key="StructureDefinition-MedicallyAssistedNutritionOrderDetailPart" name="Medically Assisted Nutrition Order Detail"/>
+<artifact id="StructureDefinition/MedicallyAssistedNutritionOrderEntry" key="StructureDefinition-MedicallyAssistedNutritionOrderEntry" name="Medically Assisted Nutrition Order Entry"/>
+<artifact id="StructureDefinition/MedicallyAssistedNutritionProcedurePart" key="StructureDefinition-MedicallyAssistedNutritionProcedurePart" name="Medically Assisted Nutrition Procedure Information"/>
+<artifact id="StructureDefinition/PersonalACPDocument" key="StructureDefinition-PersonalACPDocument" name="Personal Advance Care Plan"/>
+<artifact id="StructureDefinition/PlannedProceduresPMOSection" key="StructureDefinition-PlannedProceduresPMOSection" name="Planned Procedure PMO Section"/>
+<artifact id="StructureDefinition/PortableMedicalOrderDocument" key="StructureDefinition-PortableMedicalOrderDocument" name="Portable Medical Order"/>
+<artifact id="StructureDefinition/PowersDeniedPart" key="StructureDefinition-PowersDeniedPart" name="Powers Denied Part of the ADI Healthcare Agent Consent Entry"/>
+<artifact id="StructureDefinition/PowersGrantedPart" key="StructureDefinition-PowersGrantedPart" name="Powers Granted Part of the ADI Healthcare Agent Consent Entry"/>
+<artifact id="StructureDefinition/SourceFormSection" key="StructureDefinition-SourceFormSection" name="Source Form Section"/>
+<artifact id="StructureDefinition/TreatmentInterventionPreferencesSection" key="StructureDefinition-TreatmentInterventionPreferencesSection" name="Treatment Intervention Preferences Section"/>
+<artifact id="StructureDefinition/UponDeathPreferencesSection" key="StructureDefinition-UponDeathPreferencesSection" name="Upon Death Preferences Section"/>
+<artifact id="StructureDefinition/WitnessAndNotarySection" key="StructureDefinition-WitnessAndNotarySection" name="Witness And Notary Section"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

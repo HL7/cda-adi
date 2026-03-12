@@ -1,7 +1,7 @@
 Profile: Healthcare_Agent_Appointment_Section 
 // $Section is an alias
 Parent: $Section
-Id: Healthcare.Agent.Appointment.Section
+Id: HealthcareAgentAppointmentSection
 Title: "Healthcare Agent Appointment Section"
 Description: """
 This section contains the consent to appoint one or more healthcare agents and additional information about the agents' powers or limitations.

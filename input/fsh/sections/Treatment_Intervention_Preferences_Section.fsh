@@ -1,7 +1,7 @@
 Profile: Treatment_Intervention_Preferences_Section 
 // $Section is an alias
 Parent: $Section
-Id: Treatment.Intervention.Preferences.Section
+Id: TreatmentInterventionPreferencesSection
 Title: "Treatment Intervention Preferences Section"
 Description: """
 This section contains treatment intervention preferences under potential future health scenarios expressed by the person.

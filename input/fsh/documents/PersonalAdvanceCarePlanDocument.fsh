@@ -5,7 +5,7 @@
 Profile: PersonalAdvanceCarePlanDocument
 // This is a Person-Authored document, so Parent template is the PatientGenerated document. Provider-Authored uses USRealm Header.
 Parent: USRealmHeaderforPatientGeneratedDocument
-Id: PersonalACP
+Id: PersonalACPDocument
 Title: "Personal Advance Care Plan"
 Description: """This profile defines the requirements for communicating a Personal Advance Care Plan (ACP) document using a Composition Resource. 
 
@@ -29,6 +29,8 @@ Optionally, the document may contain sections for treatment intervention prefere
 """
 
 // C-CDA uses a RuleSet * insert LogicalModelTemplate(personal-acp, 2.16.840.1.113883.4.823.1.1.1, 2026-08-28  We can't figure out how this works.)
+// ANDREA: Why templateId 3..*?
+//Count the number of templates that are required in the parent and add more as specified here, or just specify this one and allow more.
 * templateId 3..*
 * templateId contains personal-acp 1..1
 * templateId[personal-acp].root = "2.16.840.1.113883.4.823.1.1.1"
@@ -44,7 +46,7 @@ Optionally, the document may contain sections for treatment intervention prefere
 * sdtcCategory ^slicing.discriminator[=].path = "codeSystem"
 * sdtcCategory ^slicing.rules = #open
 * sdtcCategory contains 
-     ahdDocumentClass 1..1 MS and
+     ahdDocumentClass 1..1 and
      pacpDocumentClass 0..1 MS
 * sdtcCategory[ahdDocumentClass].code 1..1
 * sdtcCategory[ahdDocumentClass].code = $loinc#42348-3
@@ -55,8 +57,8 @@ Optionally, the document may contain sections for treatment intervention prefere
 * sdtcCategory[ahdDocumentClass].codeSystemName = "LOINC"
 * sdtcCategory[ahdDocumentClass].displayName 1..1
 * sdtcCategory[pacpDocumentClass].code 1..1
-* sdtcCategory[pacpDocumentClass].code = $loinc#81334-5
-* sdtcCategory[pacpDocumentClass].code ^short = "Used to categorize the document type as a Person Authored Advance Healthcare Directive"
+* sdtcCategory[pacpDocumentClass].code = $loinc#59284-0
+* sdtcCategory[pacpDocumentClass].code ^short = "Used to categorize the document type as a Patient-Authored Consent Document"
 * sdtcCategory[pacpDocumentClass].codeSystem 1..1
 * sdtcCategory[pacpDocumentClass].codeSystem = "2.16.840.1.113883.6.1"
 * sdtcCategory[pacpDocumentClass].codeSystemName 1..1
@@ -65,15 +67,22 @@ Optionally, the document may contain sections for treatment intervention prefere
 
 * code from $AdvanceDirectiveDocumentTypes (required) 
 * code ^short = """
-This profile is used to represent a person authored advance healthcare directive document. A person authored advance healthcare directive document is categorized as a personal advance care plan (Personal ACP) document. This sub-category of advance healthcare directive documents expresses the patient’s own preferences as opposed to provider authored advance healthcare directive documents which establish portable medical orders for the patient. 
-This sub-category of advance healthcare directive document always is authored by the subject of the document (the patient). If care providers are involved in the creation of these types of documents, they may be included as facilitators. The patient (or their representative) is required to sign the document and is represented as an authenticator. Others who sign the document are represented as authenticators with their role such as witness or notary also included.
-It includes a presentation of the completed source form of the completed document. It also includes information about the person’s appointed healthcare agent(s), treatment intervention and care experience preferences under potential future health scenarios, as well as administrative and completion information, additional documentation, and witness and notary information if required for the form to be considered valid. 
-The document always contains the source form in the Source Form section. It may include other textual information organized in standard structural sections which may or may not include machine processable encoded entries.
+This profile is used to represent a person-authored advance healthcare directive document. A person authored advance healthcare directive document is categorized 
+as a consent document. This sub-category of advance healthcare directive documents expresses the patient’s own preferences as 
+opposed to provider-authored advance healthcare directive documents which establish portable medical orders for the patient. 
+This sub-category of advance healthcare directive document always is authored by the subject of the document (the patient). If care providers are involved in the 
+creation of these types of documents, they may be included as facilitators. The patient (or their representative) is required to sign the document and is 
+represented as an authenticator. Others who sign the document are represented as authenticators with their role such as witness or notary also included.
+It includes a presentation of the original source form of the completed document. It includes information about the person’s appointed healthcare agent(s), 
+and may additionally include treatment intervention and care experience preferences under potential future health scenarios, administrative and completion information, additional 
+documentation, and witness and notary information. 
+The document always contains the source form in the Source Form section. It may include textual information present in the source form, organized in standard structural sections which 
+may or may not include machine processable encoded entries.
 """
 * code ^comment = "SHALL contain exactly one [1..1] code."
 
 * sdtcStatusCode 1..1
-* sdtcStatusCode ^comment = "sdtc:statusCode is #completed is for documents where all activities required for a valid document have been completed, #new is for new documents that have not been published yet."
+* sdtcStatusCode ^comment = "sdtc:statusCode is #completed is for documents where all activities required for a valid document have been completed, #new is for new documents or document versions that have not been completed yet."
 
 * effectiveTime ^short = "The system origination time"
 * effectiveTime ^comment = "Use miliseconds and the relevant timezone offset from UTC to explicitly state the timezone of the document's author and to support federated document management."
@@ -87,6 +96,7 @@ The document always contains the source form in the Source Form section. It may 
 * versionNumber ^short = "The distinct version of a logical document"
 * versionNumber ^comment = "Used in conjunction with setId to identify a distinct version of a logical document"
 
+// ANDREA: Let's discuss where to move this to, and how to create some examples.
 // learn how to constrain act relationship for documentation of and then ServiceEvent - lesson for another day - or try this on your own
 // documentationOf is going to be a slicing exercise.
 
@@ -99,15 +109,16 @@ The document always contains the source form in the Source Form section. It may 
 * component.structuredBody.component contains 
 // This is the section level constraints within the document body.
 // It uses cardinality for SHALL 1..1,  SHOULD 0..1 MS, and  MAY 0..1   always put "and" at the end until the last one.
+// ANDREA - what was the rule for when to use MS and when not to based on cardinality?  Only when low order cardinality is 0?
      source-form 1..1 MS and 
-     administrative-information 0..1 MS and
-     healthcare-agent-appointment 1..1 MS and
-     care-experience-preferences 0..1 MS and
+     healthcare-agent-appointment 0..1 MS and
      treatment-intervention-preferences 0..1 MS and
+     care-experience-preferences 0..1 MS and
      upon-death-preferences 0..1 MS and
-     witness-and-notary 0..1 MS and
+     additional-documentation 0..1 MS and
+     administrative-information 0..1 MS and
      completion-information 0..1 MS and
-     additional-documentation 0..1 MS
+     witness-and-notary 0..1 MS
 
 // Source_Form_Section is the computable name of the Section template (defined separately)
 // What should be documented in the comment? use the conformance verbs to make your expectation clearer.
@@ -115,34 +126,35 @@ The document always contains the source form in the Source Form section. It may 
 * component.structuredBody.component[source-form].section ^short = "Original form image for rendering"
 * component.structuredBody.component[source-form].section ^comment = "SHALL contain only one 1..1 Source Form ObservationMedia Entry."
 
-* component.structuredBody.component[administrative-information].section only Administrative_Information_Section
-* component.structuredBody.component[administrative-information].section ^short = "Information collected for administrative reasons"
-* component.structuredBody.component[administrative-information].section ^comment = "SHOULD contain 0..* Advance Healthcare Directive Observation Entry."
-
 * component.structuredBody.component[healthcare-agent-appointment].section only Healthcare_Agent_Appointment_Section
 * component.structuredBody.component[healthcare-agent-appointment].section ^short = "Consent information that appoints healthcare agents"
-* component.structuredBody.component[healthcare-agent-appointment].section ^comment = "SHALL Contain only one 1..1 Healthcare Agent Consent Entry. This entry includes options for expressing why no healthcare agent(s) were appointed."
-
-* component.structuredBody.component[care-experience-preferences].section only Care_Experience_Preferences_Section
-* component.structuredBody.component[care-experience-preferences].section ^short = "Person's conditional care experience preferences"
-* component.structuredBody.component[care-experience-preferences].section ^comment = "SHOULD contain 0..* Care Experience Preference Entry."
+//ANDREA - need to discuss SHOULD 0..1. Is it your understanding this will limit the number of occurences to no more than 1? 
+* component.structuredBody.component[healthcare-agent-appointment].section ^comment = "SHOULD contain 0..1 Healthcare Agent Consent Entry. This entry includes options for expressing why no healthcare agent(s) were appointed."
 
 * component.structuredBody.component[treatment-intervention-preferences].section only Treatment_Intervention_Preferences_Section
 * component.structuredBody.component[treatment-intervention-preferences].section ^short = "Persion's conditional treatment intervention preferences"
 * component.structuredBody.component[treatment-intervention-preferences].section ^comment = "SHOULD contain 0..* Treatment Intervention Preference Entry"
 
+* component.structuredBody.component[care-experience-preferences].section only Care_Experience_Preferences_Section
+* component.structuredBody.component[care-experience-preferences].section ^short = "Person's conditional care experience preferences"
+* component.structuredBody.component[care-experience-preferences].section ^comment = "SHOULD contain 0..* Care Experience Preference Entry."
+
 * component.structuredBody.component[source-form].section only Upon_Death_Preferences_Section
 * component.structuredBody.component[source-form].section ^short = "Person's preferences if they should pass away--burial arrangements, actions to be taken after their death, etc."
 * component.structuredBody.component[source-form].section ^comment = "SHOULD contain 0..* Care Experience Preference Entry where the precondition is death."
 
-* component.structuredBody.component[source-form].section only Witness_And_Notary_Section
-* component.structuredBody.component[source-form].section ^short = "Person's signature and Information about Witnesses or Notary required to complete a valid document"
-* component.structuredBody.component[source-form].section ^comment = "SHOULD contain 0..* Esignature ObservationMedia Entry where the id references the associated authenticator in the header."
+* component.structuredBody.component[source-form].section only Additional_Documentation_Section
+* component.structuredBody.component[source-form].section ^short = "Information about additional relevant advance healthcare directive documents and where they can be accessed"
+* component.structuredBody.component[source-form].section ^comment = "SHOULD contain 0..* Advance Healthcare Directive Observation Entry."
+
+* component.structuredBody.component[administrative-information].section only Administrative_Information_Section
+* component.structuredBody.component[administrative-information].section ^short = "Information collected for administrative reasons"
+* component.structuredBody.component[administrative-information].section ^comment = "SHOULD contain 0..* Advance Healthcare Directive Observation Entry."
 
 * component.structuredBody.component[source-form].section only Completion_Information_Section
 * component.structuredBody.component[source-form].section ^short = "Requirements to complete a valid document"
 * component.structuredBody.component[source-form].section ^comment = "SHOULD contain 0..* Clause Observation Entry. SHOULD contain 0..1 Esignature ObservationMedia Entry where the id references the associated authenticator in the header."
 
-* component.structuredBody.component[source-form].section only Additional_Documentation_Section
-* component.structuredBody.component[source-form].section ^short = "Information about additional relevant advance healthcare directive documents and where they can be accessed"
-* component.structuredBody.component[source-form].section ^comment = "SHOULD contain 0..* Advance Healthcare Directive Observation Entry."
+* component.structuredBody.component[source-form].section only Witness_And_Notary_Section
+* component.structuredBody.component[source-form].section ^short = "Person's signature and Information about Witnesses or Notary required to complete a valid document"
+* component.structuredBody.component[source-form].section ^comment = "SHOULD contain 0..* Esignature ObservationMedia Entry where the id references the associated authenticator in the header."
