@@ -8,11 +8,11 @@
 <artifact id="StructureDefinition/Source.Form.Entry" key="StructureDefinition-Source.Form.Entry" name="ADI Source Form Entry"/>
 <artifact id="StructureDefinition/AdditionalDocumentationSection" key="StructureDefinition-AdditionalDocumentationSection" name="Additional Documentation Section"/>
 <artifact id="StructureDefinition/AdditionalOrderEntry" key="StructureDefinition-AdditionalOrderEntry" name="Additional Order Entry"/>
-<artifact id="StructureDefinition/AdditionalOrderProcedurePart" key="StructureDefinition-AdditionalOrderProcedurePart" name="Additional Order Procedure Information"/>
+<artifact id="StructureDefinition/AdditionalOrderPlannedProcedurePart" key="StructureDefinition-AdditionalOrderPlannedProcedurePart" name="Additional Order Procedure Information"/>
 <artifact id="StructureDefinition/AdministrativeInformationSection" key="StructureDefinition-AdministrativeInformationSection" name="Administrative Information Section"/>
 <artifact id="StructureDefinition/AgentAppointmentPart" key="StructureDefinition-AgentAppointmentPart" name="Agent Appointment Part of the ADI Healthcare Agent Consent Entry"/>
 <artifact id="StructureDefinition/CPROrderDetailPart" key="StructureDefinition-CPROrderDetailPart" name="CPR Order Detail"/>
-<artifact id="StructureDefinition/CPRProcedurePart" key="StructureDefinition-CPRProcedurePart" name="CPR Procedure Information"/>
+<artifact id="StructureDefinition/CPRPlannedProcedurePart" key="StructureDefinition-CPRPlannedProcedurePart" name="CPR Procedure Information"/>
 <artifact id="StructureDefinition/CardiopulmonaryResuscitationOrderEntry" key="StructureDefinition-CardiopulmonaryResuscitationOrderEntry" name="Cardiopulmonary Resuscitation Order Entry"/>
 <artifact id="StructureDefinition/CareExperiencePreferencesSection" key="StructureDefinition-CareExperiencePreferencesSection" name="Care Experience Preferences Section"/>
 <artifact id="StructureDefinition/CodedPowersGrantedPart" key="StructureDefinition-CodedPowersGrantedPart" name="Coded Powers Granted Part of the ADI Healthcare Agent Consent Entry"/>
@@ -21,11 +21,11 @@
 <artifact id="StructureDefinition/HealthcareAgentAppointmentSection" key="StructureDefinition-HealthcareAgentAppointmentSection" name="Healthcare Agent Appointment Section"/>
 <artifact id="StructureDefinition/InitialTreatmentOrderDetailPart" key="StructureDefinition-InitialTreatmentOrderDetailPart" name="Initial Treatment Order Detail"/>
 <artifact id="StructureDefinition/InitialTreatmentOrderEntry" key="StructureDefinition-InitialTreatmentOrderEntry" name="Initial Treatment Order Entry"/>
-<artifact id="StructureDefinition/InitialTreatmentProcedurePart" key="StructureDefinition-InitialTreatmentProcedurePart" name="Initial Treatment Procedure Information"/>
+<artifact id="StructureDefinition/InitialTreatmentPlannedProcedurePart" key="StructureDefinition-InitialTreatmentPlannedProcedurePart" name="Initial Treatment Procedure Information"/>
 <artifact id="StructureDefinition/Jurisdiction.Part" key="StructureDefinition-Jurisdiction.Part" name="Jurisdiction Part of the ADI Source Form Entry"/>
 <artifact id="StructureDefinition/MedicallyAssistedNutritionOrderDetailPart" key="StructureDefinition-MedicallyAssistedNutritionOrderDetailPart" name="Medically Assisted Nutrition Order Detail"/>
 <artifact id="StructureDefinition/MedicallyAssistedNutritionOrderEntry" key="StructureDefinition-MedicallyAssistedNutritionOrderEntry" name="Medically Assisted Nutrition Order Entry"/>
-<artifact id="StructureDefinition/MedicallyAssistedNutritionProcedurePart" key="StructureDefinition-MedicallyAssistedNutritionProcedurePart" name="Medically Assisted Nutrition Procedure Information"/>
+<artifact id="StructureDefinition/MedicallyAssistedNutritionPlannedProcedurePart" key="StructureDefinition-MedicallyAssistedNutritionPlannedProcedurePart" name="Medically Assisted Nutrition Procedure Information"/>
 <artifact id="StructureDefinition/PersonalACPDocument" key="StructureDefinition-PersonalACPDocument" name="Personal Advance Care Plan"/>
 <artifact id="StructureDefinition/PlannedProceduresPMOSection" key="StructureDefinition-PlannedProceduresPMOSection" name="Planned Procedure PMO Section"/>
 <artifact id="StructureDefinition/PortableMedicalOrderDocument" key="StructureDefinition-PortableMedicalOrderDocument" name="Portable Medical Order"/>

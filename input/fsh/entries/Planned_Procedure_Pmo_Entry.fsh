@@ -45,7 +45,7 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship ^slicing.rules = #open
 * entryRelationship contains 
     order-detail-part 1..1 and
-    procedure-part 0..1 MS and
+    planned-procedure-part 0..1 MS and
     clinical-instruction-part 0..* MS and
     goal-part 0..* MS
 
@@ -56,12 +56,12 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship[order-detail-part].act only CPR_Order_Detail_Part
 * entryRelationship[order-detail-part].act ^comment = "If needed, the identifier for the order detail part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
-* entryRelationship[procedure-part].typeCode = #COMP (exactly)
-* entryRelationship[procedure-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
-* entryRelationship[procedure-part].inversionInd = false (exactly)
-* entryRelationship[procedure-part].procedure 1..1 MS 
-* entryRelationship[procedure-part].procedure only CPR_Procedure_Part
-* entryRelationship[procedure-part].procedure ^comment = "If needed, the identifier for the procedure part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
+* entryRelationship[planned-procedure-part].typeCode = #COMP (exactly)
+* entryRelationship[planned-procedure-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
+* entryRelationship[planned-procedure-part].inversionInd = false (exactly)
+* entryRelationship[planned-procedure-part].procedure 1..1 MS 
+* entryRelationship[planned-procedure-part].procedure only CPR_Planned_Procedure_Part
+* entryRelationship[planned-procedure-part].procedure ^comment = "If needed, the identifier for the procedure part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
 * entryRelationship[clinical-instruction-part].typeCode = #COMP (exactly)
 * entryRelationship[clinical-instruction-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
@@ -111,9 +111,9 @@ If needed, the identifier for the order detail part of this clinical statement c
 * statusCode.code = $ActStatusCode#active
 
 
-Profile: CPR_Procedure_Part
+Profile: CPR_Planned_Procedure_Part
 Parent: PlannedProcedure
-Id: CPRProcedurePart
+Id: CPRPlannedProcedurePart
 Title: "CPR Procedure Information"
 Description: """
 This entry is an procedure in moodCode RQO. In FHIR this expresses the ServiceRequest.code. 
@@ -124,7 +124,7 @@ In FHIR this aligns with use of the doNotPerform element.
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 
 //* obeys should-text-ref-value and should-author
-* insert LogicalModelTemplate(cpr-procedure-part, 2.16.840.1.113883.9.275.3.1.2, 2026-08-28)
+* insert LogicalModelTemplate(cpr-planned-procedure-part, 2.16.840.1.113883.9.275.3.1.2, 2026-08-28)
 
 // Remove becuase this constraint already is specified in the parent template.
 //* classCode = #PROC (exactly)
@@ -203,7 +203,7 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship ^slicing.rules = #open
 * entryRelationship contains 
     order-detail-part 1..1 and
-    procedure-part 0..1 MS and
+    planned-procedure-part 0..1 MS and
     clinical-instruction-part 0..* MS and
     goal-part 0..* MS
 
@@ -214,12 +214,12 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship[order-detail-part].act only Initial_Treatment_Order_Detail_Part
 * entryRelationship[order-detail-part].act ^comment = "If needed, the identifier for the order detail part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
-* entryRelationship[procedure-part].typeCode = #COMP (exactly)
-* entryRelationship[procedure-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
-* entryRelationship[procedure-part].inversionInd = false (exactly)
-* entryRelationship[procedure-part].procedure 1..1 MS 
-* entryRelationship[procedure-part].procedure only Initial_Treatment_Procedure_Part
-* entryRelationship[procedure-part].procedure ^comment = "If needed, the identifier for the procedure part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
+* entryRelationship[planned-procedure-part].typeCode = #COMP (exactly)
+* entryRelationship[planned-procedure-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
+* entryRelationship[planned-procedure-part].inversionInd = false (exactly)
+* entryRelationship[planned-procedure-part].procedure 1..1 MS 
+* entryRelationship[planned-procedure-part].procedure only Initial_Treatment_Planned_Procedure_Part
+* entryRelationship[planned-procedure-part].procedure ^comment = "If needed, the identifier for the procedure part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
 * entryRelationship[clinical-instruction-part].typeCode = #COMP (exactly)
 * entryRelationship[clinical-instruction-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
@@ -269,9 +269,9 @@ If needed, the identifier for the order detail part of this clinical statement c
 * statusCode.code = $ActStatusCode#active
 
 
-Profile: Initial_Treatment_Procedure_Part
+Profile: Initial_Treatment_Planned_Procedure_Part
 Parent: PlannedProcedure
-Id: InitialTreatmentProcedurePart
+Id: InitialTreatmentPlannedProcedurePart
 Title: "Initial Treatment Procedure Information"
 Description: """
 This entry is an procedure in moodCode RQO. In FHIR this expresses the ServiceRequest.code. 
@@ -282,7 +282,7 @@ In FHIR this aligns with use of the doNotPerform element.
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 
 //* obeys should-text-ref-value and should-author
-* insert LogicalModelTemplate(initial-treatment-procedure-part, 2.16.840.1.113883.9.275.3.2.2, 2026-08-28)
+* insert LogicalModelTemplate(initial-treatment-planned-procedure-part, 2.16.840.1.113883.9.275.3.2.2, 2026-08-28)
 
 // Remove becuase this constraint already is specified in the parent template.
 //* classCode = #PROC (exactly)
@@ -361,16 +361,16 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship ^slicing.rules = #open
 //  Remove this because there is no order detail part.  order-detail-part 1..1 and   
 * entryRelationship contains 
-    procedure-part 0..1 MS and
+    planned-procedure-part 0..1 MS and
     clinical-instruction-part 0..* MS and
     goal-part 0..* MS
 
-* entryRelationship[procedure-part].typeCode = #COMP (exactly)
-* entryRelationship[procedure-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
-* entryRelationship[procedure-part].inversionInd = false (exactly)
-* entryRelationship[procedure-part].procedure 1..1 MS 
-* entryRelationship[procedure-part].procedure only Additional_Order_Procedure_Part
-* entryRelationship[procedure-part].procedure ^comment = "If needed, the identifier for the procedure part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
+* entryRelationship[planned-procedure-part].typeCode = #COMP (exactly)
+* entryRelationship[planned-procedure-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
+* entryRelationship[planned-procedure-part].inversionInd = false (exactly)
+* entryRelationship[planned-procedure-part].procedure 1..1 MS 
+* entryRelationship[planned-procedure-part].procedure only Additional_Order_Planned_Procedure_Part
+* entryRelationship[planned-procedure-part].procedure ^comment = "If needed, the identifier for the procedure part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
 * entryRelationship[clinical-instruction-part].typeCode = #COMP (exactly)
 * entryRelationship[clinical-instruction-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
@@ -387,9 +387,9 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship[goal-part].observation ^comment = "If needed, the identifier for the goal part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
 
-Profile: Additional_Order_Procedure_Part
+Profile: Additional_Order_Planned_Procedure_Part
 Parent: PlannedProcedure
-Id: AdditionalOrderProcedurePart
+Id: AdditionalOrderPlannedProcedurePart
 Title: "Additional Order Procedure Information"
 Description: """
 This entry is a procedure in moodCode RQO. In FHIR this expresses the ServiceRequest.code. 
@@ -400,7 +400,7 @@ In FHIR this aligns with use of the doNotPerform element.
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 
 //* obeys should-text-ref-value and should-author
-* insert LogicalModelTemplate(additional-order-procedure-part, 2.16.840.1.113883.9.275.3.3.2, 2026-08-28)
+* insert LogicalModelTemplate(additional-order-planned-procedure-part, 2.16.840.1.113883.9.275.3.3.2, 2026-08-28)
 
 // Remove becuase this constraint already is specified in the parent template.
 //* classCode = #PROC (exactly)
@@ -479,7 +479,7 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship ^slicing.rules = #open
 * entryRelationship contains 
     order-detail-part 1..1 and
-    procedure-part 0..1 MS and
+    planned-procedure-part 0..1 MS and
     clinical-instruction-part 0..* MS and
     goal-part 0..* MS
 
@@ -490,12 +490,12 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship[order-detail-part].act only Medically_Assisted_Nutrition_Order_Detail_Part
 * entryRelationship[order-detail-part].act ^comment = "If needed, the identifier for the order detail part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
-* entryRelationship[procedure-part].typeCode = #COMP (exactly)
-* entryRelationship[procedure-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
-* entryRelationship[procedure-part].inversionInd = false (exactly)
-* entryRelationship[procedure-part].procedure 1..1 MS 
-* entryRelationship[procedure-part].procedure only Medically_Assisted_Nutrition_Procedure_Part
-* entryRelationship[procedure-part].procedure ^comment = "If needed, the identifier for the procedure part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
+* entryRelationship[planned-procedure-part].typeCode = #COMP (exactly)
+* entryRelationship[planned-procedure-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
+* entryRelationship[planned-procedure-part].inversionInd = false (exactly)
+* entryRelationship[planned-procedure-part].procedure 1..1 MS 
+* entryRelationship[planned-procedure-part].procedure only Medically_Assisted_Nutrition_Planned_Procedure_Part
+* entryRelationship[planned-procedure-part].procedure ^comment = "If needed, the identifier for the procedure part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
 * entryRelationship[clinical-instruction-part].typeCode = #COMP (exactly)
 * entryRelationship[clinical-instruction-part].typeCode ^comment = "SHALL contain exactly one [1..1] @typeCode=\"COMP\" Refers to (CodeSystem: HL7ActRelationshipType urn:oid:2.16.840.1.113883.5.1002)."
@@ -545,9 +545,9 @@ If needed, the identifier for the order detail part of this clinical statement c
 * statusCode.code = $ActStatusCode#active
 
 
-Profile: Medically_Assisted_Nutrition_Procedure_Part
+Profile: Medically_Assisted_Nutrition_Planned_Procedure_Part
 Parent: PlannedProcedure
-Id: MedicallyAssistedNutritionProcedurePart
+Id: MedicallyAssistedNutritionPlannedProcedurePart
 Title: "Medically Assisted Nutrition Procedure Information"
 Description: """
 This entry is an procedure in moodCode RQO. In FHIR this expresses the ServiceRequest.code. 
@@ -558,7 +558,7 @@ In FHIR this aligns with use of the doNotPerform element.
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 
 //* obeys should-text-ref-value and should-author
-* insert LogicalModelTemplate(medically-assisted-nutrition-procedure-part, 2.16.840.1.113883.9.275.3.2.2, 2026-08-28)
+* insert LogicalModelTemplate(medically-assisted-nutrition-planned-procedure-part, 2.16.840.1.113883.9.275.3.4.2, 2026-08-28)
 
 // Remove becuase this constraint already is specified in the parent template.
 //* classCode = #PROC (exactly)
