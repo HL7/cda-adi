@@ -32,8 +32,9 @@ In FHIR this aligns with use of the doNotPerform element.
 * statusCode.code = $ActStatusCode#active
 
 // ANDREA - can I say this in a constraint?
-// This is the time when the order is placed. It should be a TS or may be IVL with effectiveTime.low populated and no effectiveTime.high.
+// This is the time when the order is placed.
 * effectiveTime 1..1
+* effectiveTime ^short = "Time when the order is placed."
 
 * entryRelationship MS 
 * entryRelationship ^slicing.discriminator[+].type = #profile
@@ -77,6 +78,8 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship[goal-part].observation only GoalObservation
 * entryRelationship[goal-part].observation ^comment = "If needed, the identifier for the goal part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
+* precondition 0..1 MS
+* precondition ^short = "Expresses the precondition in an order that is conditional upon a certain health scenario."
 
 Profile: CPR_Order_Detail_Part
 Parent: $Act
@@ -150,6 +153,7 @@ In FHIR this aligns with use of the doNotPerform element.
 * text ^short = "links to the rendering of the portable medical order"
 
 // this constraint is in the parent template. * statusCode.code = $ActStatusCode#active, so it doesn't need to be repeated
+
 
 // *****************************************************************************************************************
 // Start of templates for Initial Treatment Order
@@ -235,6 +239,9 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship[goal-part].observation only GoalObservation
 * entryRelationship[goal-part].observation ^comment = "If needed, the identifier for the goal part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
+* precondition 0..1 MS
+* precondition ^short = "Expresses the precondition in an order that is conditional upon a certain health scenario."
+
 
 Profile: Initial_Treatment_Order_Detail_Part
 Parent: $Act
@@ -308,6 +315,10 @@ In FHIR this aligns with use of the doNotPerform element.
 * text ^short = "links to the rendering of the portable medical order"
 
 // this constraint is in the parent template. * statusCode.code = $ActStatusCode#active
+
+// This effectiveTime is used to express a trial period.
+* effectiveTime 0..1
+* effectiveTime ^short = "Represents the trial period duration, if a trial period is specified."
 
 // *****************************************************************************************************************
 // Start of templates for Additional Orders
@@ -386,6 +397,8 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship[goal-part].observation only GoalObservation
 * entryRelationship[goal-part].observation ^comment = "If needed, the identifier for the goal part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
+* precondition 0..1 MS
+* precondition ^short = "Expresses the precondition in an order that is conditional upon a certain health scenario."
 
 Profile: Additional_Order_Planned_Procedure_Part
 Parent: PlannedProcedure
@@ -426,6 +439,11 @@ In FHIR this aligns with use of the doNotPerform element.
 * text ^short = "links to the rendering of the portable medical order"
 
 // this constraint is in the parent template. * statusCode.code = $ActStatusCode#active
+
+// This effectiveTime is used to express a trial period.
+* effectiveTime 0..1
+* effectiveTime ^short = "Represents the trial period duration, if a trial period is specified."
+
 
 // *****************************************************************************************************************
 // Start of templates for Medically Assisted Nutrition Order
@@ -511,6 +529,8 @@ In FHIR this aligns with use of the doNotPerform element.
 * entryRelationship[goal-part].observation only GoalObservation
 * entryRelationship[goal-part].observation ^comment = "If needed, the identifier for the goal part of this clinical statement can be the id of the statement suffixed with a part# to make it distinct."
 
+* precondition 0..1 MS
+* precondition ^short = "Expresses the precondition in an order that is conditional upon a certain health scenario."
 
 Profile: Medically_Assisted_Nutrition_Order_Detail_Part
 Parent: $Act
@@ -584,3 +604,7 @@ In FHIR this aligns with use of the doNotPerform element.
 * text ^short = "links to the rendering of the portable medical order"
 
 // this constraint is in the parent template. * statusCode.code = $ActStatusCode#active
+
+// This effectiveTime is used to express a trial period.
+* effectiveTime 0..1
+* effectiveTime ^short = "Represents the trial period duration, if a trial period is specified."
