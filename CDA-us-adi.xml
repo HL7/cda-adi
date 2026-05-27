@@ -38,7 +38,20 @@
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="generalGuidance" name="General Guidance"/>
+<page key="document_category_ahd" name="Document Category - Advance Healthcare Directive"/>
+<page key="document_lifecycle_management" name="Document Lifecycle Management"/>
+<page key="document_reference" name="Document Reference"/>
+<page key="general_requirements" name="General Requirements"/>
 <page key="index" name="Home"/>
+<page key="looking_ahead" name="Looking Ahead"/>
+<page key="mhad_documents" name="Mental Health Advance Directive (MHAD) Documents"/>
+<page key="must_support" name="Must Support"/>
+<page key="narrative_text_linking" name="Narrative Text Linking"/>
+<page key="pmod_documents" name="POLST/Portable Medical Orders (PMOD) Documents"/>
+<page key="person_authored_document_workflow" name="Person Authored Document Workflow"/>
+<page key="pacp_documents" name="Personal Advance Care Plan (PACP) Documents"/>
+<page key="privacy_security" name="Privacy and Security"/>
+<page key="provenance" name="Provenance"/>
+<page key="provider_authored_document_workflow" name="Provider Authored Document Workflow"/>
 <page key="toc" name="Table of Contents"/>
 </specification>
