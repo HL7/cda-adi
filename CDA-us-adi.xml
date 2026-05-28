@@ -47,7 +47,7 @@
 <page key="mhad_documents" name="Mental Health Advance Directive (MHAD) Documents"/>
 <page key="must_support" name="Must Support"/>
 <page key="narrative_text_linking" name="Narrative Text Linking"/>
-<page key="pmod_documents" name="POLST/Portable Medical Orders (PMOD) Documents"/>
+<page key="pmo_documents" name="POLST/Portable Medical Orders (PMOD) Documents"/>
 <page key="person_authored_document_workflow" name="Person Authored Document Workflow"/>
 <page key="pacp_documents" name="Personal Advance Care Plan (PACP) Documents"/>
 <page key="privacy_security" name="Privacy and Security"/>
