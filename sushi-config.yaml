@@ -152,6 +152,8 @@ pages:
     title: Provider Authored Document Workflow
   pmo_documents.md:
     title: POLST/Portable Medical Orders (PMOD) Documents
+  download.md:
+    title: Download and Analysis
   looking_ahead.md:
     title: Looking Ahead
 #
