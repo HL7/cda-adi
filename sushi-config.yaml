@@ -4,6 +4,8 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.cda.us.adi
+# https://build.fhir.org/ig/HL7/cda-adi/  The part after HL7/ is the github repository name. This link is also reported on the github readme.md as a best practice.
+# https://build.fhir.org/ig/HL7/cda-adi/branches/[branchname] To view a branch if you put no branches, you get main.
 canonical: http://hl7.org/cda/us/adi
 name: CDA-ADI
 title: Advance Healthcare Directive Interoperability (cda-adi)
