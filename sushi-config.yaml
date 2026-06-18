@@ -38,7 +38,7 @@ dependencies:
 # Dependency on corrections to the Advance Directive Existence and Advance Directive Observation Templates introduced in C-CDA version 5.0.0
   hl7.cda.us.ccda:
     id: CCDA
-    version: 5.0.0-ballot
+    version: 5.0.0
     uri: http://hl7.org/cda/us/ccda/ImplementationGuide/hl7.cda.us.ccda
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -167,18 +167,46 @@ groups:
     name: Documents
     description: All document-related resources
     resources:
+      - PersonalAdvanceCarePlanDocument
       - POLSTPortableMedicalOrdersDocument
   sections:
     name: Sections
     description: All section-related resources
     resources:
+      - Additional_Documentation_Section
+      - Administrative_Information_Section
+      - Care_Experience_Preferences_Section
+      - Completion_Information_Section
       - Healthcare_Agent_Appointment_Section
-#  Add remaining section templates here.
+      - Planned_Procedures_PMO_Section
+      - Source_Form_Section
+      - Treatment_Intervention_Preferences_Section
+      - Upon_Death_Preferences_Section
+      - Witness_And_Notary_Section
   entries:
     name: Entries
     description: All entry-related resources
     resources:
+      - External_Entry_Reference_Entry
+      - Source_Form_Entry
+      - Jurisdiction_Part
+      - Form_Title_Part
+      - Healthcare_Agent_Consent_Entry
+      - Agent_Appointment_Part
+      - Coded_Powers_Granted_Part
+      - Powers_Granted_Part
+      - Powers_Denied_Part
+      - Cardiopulmonary_Resuscitation_Order_Entry
+      - CPR_Order_Detail_Part
+      - CPR_Planned_Procedure_Part
       - Initial_Treatment_Order_Entry
+      - Initial_Treatment_Order_Detail_Part
+      - Initial_Treatment_Planned_Procedure_Part
+      - Additional_Order_Entry
+      - Additional_Order_Planned_Procedure_Part
+      - Medically_Assisted_Nutrition_Order_Entry
+      - Medically_Assisted_Nutrition_Order_Detail_Part
+      - Medically_Assisted_Nutrition_Planned_Procedure_Part
 #  Add remaining entry templates here.
 #   implementation.xml:
 #   examples.xml:

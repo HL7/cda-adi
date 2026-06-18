@@ -4,6 +4,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/External.Entry.Reference.Entry" key="StructureDefinition-External.Entry.Reference.Entry" name="ADI External Entry Reference Entry"/>
 <artifact id="StructureDefinition/HealthcareAgentConsentEntry" key="StructureDefinition-HealthcareAgentConsentEntry" name="ADI Healthcare Agent Consent Entry"/>
 <artifact id="StructureDefinition/Source.Form.Entry" key="StructureDefinition-Source.Form.Entry" name="ADI Source Form Entry"/>
 <artifact id="StructureDefinition/AdditionalDocumentationSection" key="StructureDefinition-AdditionalDocumentationSection" name="Additional Documentation Section"/>
