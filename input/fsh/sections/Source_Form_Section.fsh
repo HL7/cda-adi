@@ -37,13 +37,24 @@ This section shall contain the binary object used to render the source form in i
 
 * text ^short = "Rendering of the Source Form Document and any additional entry data."
 
+* entry 1..* MS
+//* entry ^short = "If section/@nullFlavor is not present:"
+* entry ^comment = "SHALL contain at least one [1..*] entry."
+
 //* entry ^slicing.discriminator[+].type = #profile
 //* entry ^slicing.discriminator[=].path = "act"
 * entry ^slicing.discriminator[+].type = #profile
 * entry ^slicing.discriminator[=].path = "observationMedia"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "act"
 * entry ^slicing.rules = #open
-//* entry ^short = "If section/@nullFlavor is not present:"
-* entry ^comment = "SHALL contain at least one [1..*] entry."
-* entry contains sourceFormEntry 1..* MS 
+
+* entry contains 
+    sourceFormEntry 1..* MS and
+    externalEntryReferenceEntry 0..* MS
+
 * entry[sourceFormEntry].observationMedia 1..1 MS 
 * entry[sourceFormEntry].observationMedia only Source_Form_Entry
+
+* entry[externalEntryReferenceEntry].act 1..1 MS 
+* entry[externalEntryReferenceEntry].act only External_Entry_Reference_Entry

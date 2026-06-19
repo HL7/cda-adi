@@ -41,9 +41,11 @@ This section contains the consent to appoint one or more healthcare agents and a
 * entry ^slicing.rules = #open
 
 * entry contains 
-    healthcareAgentConsent 0..1 MS and
+    healthcareAgentConsent 1..1 MS and
     externalEntryReferenceEntry 0..1 MS
+
 * entry[healthcareAgentConsent].act 1..1 MS 
 * entry[healthcareAgentConsent].act only Healthcare_Agent_Consent_Entry
+
 * entry[externalEntryReferenceEntry].act 1..1 MS 
 * entry[externalEntryReferenceEntry].act only External_Entry_Reference_Entry

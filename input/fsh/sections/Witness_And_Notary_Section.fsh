@@ -29,3 +29,18 @@ This section contains the person's signature information with Witness and Notary
 * title ^short = "Witness and Notary" 
 
 * text ^short = "Rendering of Person's signature with Witness and Notary information and signatures"
+
+* entry 0..* MS
+//* entry ^short = "If section/@nullFlavor is not present:"
+* entry ^comment = "MAY contain [0..*] entry."
+
+//* entry ^slicing.discriminator[+].type = #profile
+//* entry ^slicing.discriminator[=].path = "observationMedia"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "act"
+* entry ^slicing.rules = #open
+
+* entry contains externalEntryReferenceEntry 0..* MS
+
+* entry[externalEntryReferenceEntry].act 1..1 MS 
+* entry[externalEntryReferenceEntry].act only External_Entry_Reference_Entry

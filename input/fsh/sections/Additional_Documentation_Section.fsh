@@ -30,17 +30,22 @@ This section contains information about additional relevant advance healthcare d
 
 * text ^short = "Rendering of information about additional relevant documents"
 
+* entry 0..* MS
+//* entry ^short = "If section/@nullFlavor is not present:"
+* entry ^comment = "May contain [0..*] entry."
+
 * entry ^slicing.discriminator[+].type = #profile
 * entry ^slicing.discriminator[=].path = "act"
 * entry ^slicing.discriminator[+].type = #profile
 * entry ^slicing.discriminator[=].path = "observation"
 * entry ^slicing.rules = #open
-//* entry ^short = "If section/@nullFlavor is not present:"
-* entry ^comment = "SHALL contain at least one [1..*] entry."
+
 * entry contains 
-    advanceDirectiveExists 1..* MS and
+    advanceDirectiveExists 0..* MS and
     externalEntryReferenceEntry 0..* MS
+
 * entry[advanceDirectiveExists].observation 1..1 MS 
 * entry[advanceDirectiveExists].observation only AdvanceDirectiveExistenceObservation
+
 * entry[externalEntryReferenceEntry].act 1..1 MS 
 * entry[externalEntryReferenceEntry].act only External_Entry_Reference_Entry
