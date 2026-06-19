@@ -29,3 +29,10 @@ This section contains information about additional administrative data.
 * title ^short = "Administrative Information" 
 
 * text ^short = "Rendering of administrative information"
+
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "act"
+* entry ^slicing.rules = #open
+* entry contains externalEntryReferenceEntry 0..* MS
+* entry[externalEntryReferenceEntry].act 1..1 MS 
+* entry[externalEntryReferenceEntry].act only External_Entry_Reference_Entry

@@ -10,6 +10,7 @@ This entry includes the person's consent to appoint a Healthcare Agent. It may i
 * ^status = #draft
 //* obeys should-text-ref-value and should-author
 * insert LogicalModelTemplate(healthcare-agent-consent, 2.16.840.1.113883.4.823.1.4.2, 2026-08-28)
+* insert NarrativeLink
 
 // These are needed because they are not already constrained in CDA-core-sd structureDefinition for ObservationMedia
 * classCode = #ACT (exactly)
@@ -22,7 +23,7 @@ This entry includes the person's consent to appoint a Healthcare Agent. It may i
 
 * code.code = $loinc#81377-4
 
-* text 1..1 
+//* text 1..1 
 * text ^short = "links to the rendering of the healthcare agent consent"
 
 * statusCode 1..1
@@ -81,7 +82,7 @@ This entry is not intended to be used as a complete clinical statement entry on 
 
 * code.code from $HealthcareAgentProxyChoices (required)
 
-* text ^short = "links to the rendering of a participating Healthcare Agent"
+//* text ^short = "links to the rendering of a participating Healthcare Agent"
 
 * participant 1..1
 //TO DO need a variant to limit this to two codes, one for if confirmed and one for if not confirmed.
@@ -138,7 +139,7 @@ This entry is not intended to be used as a complete clinical statement entry on 
 //TO DO: confirm if we have a better loinc code for Form Title
 * code.code = $loinc#75786-4
 
-* text ^short = "links to the rendering of a coded Healthcare Agent power"
+//* text ^short = "links to the rendering of a coded Healthcare Agent power"
 
 * value 1..1 
 * value only $CD
@@ -163,7 +164,7 @@ This entry is not intended to be used as a complete clinical statement entry on 
 //TO DO: confirm if we have a better loinc code for Form Title
 * code.code = $loinc#81346-9
 
-* text ^short = "links to the rendering of Healthcare Agent"
+//* text ^short = "links to the rendering of Healthcare Agent"
 
 * value 1..*
 * value only $ED

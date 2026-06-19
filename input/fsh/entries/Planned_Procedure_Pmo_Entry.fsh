@@ -13,6 +13,7 @@ In FHIR this aligns with use of the doNotPerform element.
 
 //* obeys should-text-ref-value and should-author
 * insert LogicalModelTemplate(cardio-resuscitation-order, 2.16.840.1.113883.9.275.3.1, 2026-08-28)
+* insert NarrativeLink
 
 // These are needed because they are not already constrained in CDA-core-sd structureDefinition for ObservationMedia
 * classCode = #ACT (exactly)
@@ -25,7 +26,7 @@ In FHIR this aligns with use of the doNotPerform element.
 
 * code.code = $loinc#100822-6
 
-* text 1..1 
+//* text 1..1
 * text ^short = "links to the rendering of the portable medical order"
 
 * statusCode 1..1
@@ -107,8 +108,8 @@ If needed, the identifier for the order detail part of this clinical statement c
 
 * code.code from $CardiopulmonaryResuscitationOrderOptions (required)
 
-* text 1..1 
-* text ^short = "links to the rendering of the portable medical order"
+//* text 1..1 
+//* text ^short = "links to the rendering of the portable medical order"
 
 * statusCode 1..1
 * statusCode.code = $ActStatusCode#active
@@ -149,8 +150,8 @@ If the order is to NOT perform the procedure, then negationInd will be true for 
 In FHIR this aligns with use of the doNotPerform element.
 """
 
-* text 1..1 
-* text ^short = "links to the rendering of the portable medical order"
+//* text 1..1 
+//* text ^short = "links to the rendering of the portable medical order"
 
 // this constraint is in the parent template. * statusCode.code = $ActStatusCode#active, so it doesn't need to be repeated
 
@@ -173,6 +174,7 @@ In FHIR this aligns with use of the doNotPerform element.
 
 //* obeys should-text-ref-value and should-author
 * insert LogicalModelTemplate(initial-treatment-order, 2.16.840.1.113883.9.275.3.2, 2026-08-28)
+* insert NarrativeLink
 
 // These are needed because they are not already constrained in CDA-core-sd structureDefinition for ObservationMedia
 * classCode = #ACT (exactly)
@@ -185,7 +187,7 @@ In FHIR this aligns with use of the doNotPerform element.
 
 * code.code = $loinc#100823-4
 
-* text 1..1 
+//* text 1..1 
 * text ^short = "links to the rendering of the portable medical order"
 
 * statusCode 1..1
@@ -269,8 +271,8 @@ If needed, the identifier for the order detail part of this clinical statement c
 
 * code.code from $InitialTreatmentPortableMedicalOrderOptions (extensible)
 
-* text 1..1 
-* text ^short = "links to the rendering of the portable medical order"
+//* text 1..1 
+//* text ^short = "links to the rendering of the portable medical order"
 
 * statusCode 1..1
 * statusCode.code = $ActStatusCode#active
@@ -311,8 +313,8 @@ If the order is to NOT perform the procedure, then negationInd will be true for 
 In FHIR this aligns with use of the doNotPerform element.
 """
 
-* text 1..1 
-* text ^short = "links to the rendering of the portable medical order"
+//* text 1..1 
+//* text ^short = "links to the rendering of the portable medical order"
 
 // this constraint is in the parent template. * statusCode.code = $ActStatusCode#active
 
@@ -338,6 +340,7 @@ In FHIR this aligns with use of the doNotPerform element.
 
 //* obeys should-text-ref-value and should-author
 * insert LogicalModelTemplate(additional-order, 2.16.840.1.113883.9.275.3.3, 2026-08-28)
+* insert NarrativeLink
 
 // These are needed because they are not already constrained in CDA-core-sd structureDefinition for ObservationMedia
 * classCode = #ACT (exactly)
@@ -350,7 +353,7 @@ In FHIR this aligns with use of the doNotPerform element.
 
 * code.code = $loinc#100824-2
 
-* text 1..1 
+//* text 1..1 
 * text ^short = "links to the rendering of the portable medical order"
 
 * statusCode 1..1
@@ -435,8 +438,8 @@ If the order is to NOT perform the procedure, then negationInd will be true for 
 In FHIR this aligns with use of the doNotPerform element.
 """
 
-* text 1..1 
-* text ^short = "links to the rendering of the portable medical order"
+//* text 1..1 
+//* text ^short = "links to the rendering of the portable medical order"
 
 // this constraint is in the parent template. * statusCode.code = $ActStatusCode#active
 
@@ -463,6 +466,7 @@ In FHIR this aligns with use of the doNotPerform element.
 
 //* obeys should-text-ref-value and should-author
 * insert LogicalModelTemplate(nutrition-order, 2.16.840.1.113883.9.275.3.4, 2026-08-28)
+* insert NarrativeLink
 
 // These are needed because they are not already constrained in CDA-core-sd structureDefinition for ObservationMedia
 * classCode = #ACT (exactly)
@@ -475,7 +479,7 @@ In FHIR this aligns with use of the doNotPerform element.
 
 * code.code = $loinc#100825-9
 
-* text 1..1 
+//* text 1..1 
 * text ^short = "links to the rendering of the portable medical order"
 
 * statusCode 1..1
@@ -558,8 +562,8 @@ If needed, the identifier for the order detail part of this clinical statement c
 
 * code.code from $MedicallyAssistedNutritionOrderOptions (extensible)
 
-* text 1..1 
-* text ^short = "links to the rendering of the portable medical order"
+//* text 1..1 
+//* text ^short = "links to the rendering of the portable medical order"
 
 * statusCode 1..1
 * statusCode.code = $ActStatusCode#active
@@ -600,8 +604,8 @@ If the order is to NOT perform the procedure, then negationInd will be true for 
 In FHIR this aligns with use of the doNotPerform element.
 """
 
-* text 1..1 
-* text ^short = "links to the rendering of the portable medical order"
+//* text 1..1 
+//* text ^short = "links to the rendering of the portable medical order"
 
 // this constraint is in the parent template. * statusCode.code = $ActStatusCode#active
 

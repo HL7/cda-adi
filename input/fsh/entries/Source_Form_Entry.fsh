@@ -61,6 +61,7 @@ This entry is not intended to be used as a complete clinical statement entry on 
 * ^status = #draft
 
 * insert LogicalModelTemplate(jurisdiction-part, 2.16.840.1.113883.4.823.1.4.24.1, 2026-08-28)
+* insert NarrativeLink
 
 * code.code = $loinc#101349-9
 
@@ -81,6 +82,7 @@ This entry is not intended to be used as a complete clinical statement entry on 
 * ^status = #draft
 
 * insert LogicalModelTemplate(form-title-part, 2.16.840.1.113883.4.823.1.4.24.2, 2026-08-28)
+* insert NarrativeLink
 
 * code.code = $loinc#92183-3
 

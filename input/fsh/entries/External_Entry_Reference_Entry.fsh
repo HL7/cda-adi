@@ -10,6 +10,7 @@ This entry represents the act of referencing another an external entry not inclu
 * ^status = #draft
 //* obeys should-text-ref-value and should-author
 * insert LogicalModelTemplate(external-entry-reference, 2.16.840.1.113883.4.823.1.4.2.5, 2026-08-28)
+* insert NarrativeLink
 
 // These are not needed because they are already constrained in CDA-core-sd structureDefinition for ObservationMedia
 // * classCode = #ACT (exactly)
@@ -21,6 +22,8 @@ This entry represents the act of referencing another an external entry not inclu
 * id ^comment = "MUST contain at least one [1..*] id."
 * id ^short = "When using a FHIR Collection Bundle for the entries, use the Resource name/Resource id as the id value. For example, 
 if the entry is a FHIR Patient resource with id 123, then the id value would be 'Condition/123'."
+
+* text ^short = "links to the rendering of the entry information contained in the externally referenced Resource."
 
 * reference 1..1
 * reference ^comment = "MUST contain exactly one [1..1] reference."

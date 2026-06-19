@@ -30,13 +30,20 @@ This section contains the consent to appoint one or more healthcare agents and a
 
 * text ^short = "Rendering of Healthcare Agent Appointment"
 
+* entry 1..* MS
+//* entry ^short = "If section/@nullFlavor is not present:"
+* entry ^comment = "SHALL contain at least one [1..*] entry."
+
 //* entry ^slicing.discriminator[+].type = #profile
 //* entry ^slicing.discriminator[=].path = "act"
 * entry ^slicing.discriminator[+].type = #profile
 * entry ^slicing.discriminator[=].path = "act"
 * entry ^slicing.rules = #open
-//* entry ^short = "If section/@nullFlavor is not present:"
-* entry ^comment = "SHALL contain at least one [1..*] entry."
-* entry contains healthcareAgentConsent 1..1 MS 
+
+* entry contains 
+    healthcareAgentConsent 0..1 MS and
+    externalEntryReferenceEntry 0..1 MS
 * entry[healthcareAgentConsent].act 1..1 MS 
 * entry[healthcareAgentConsent].act only Healthcare_Agent_Consent_Entry
+* entry[externalEntryReferenceEntry].act 1..1 MS 
+* entry[externalEntryReferenceEntry].act only External_Entry_Reference_Entry
