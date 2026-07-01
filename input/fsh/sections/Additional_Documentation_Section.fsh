@@ -32,7 +32,7 @@ This section contains information about additional relevant advance healthcare d
 
 * entry 0..* MS
 //* entry ^short = "If section/@nullFlavor is not present:"
-* entry ^comment = "May contain [0..*] entry."
+* entry ^comment = "MAY contain [0..*] entry."
 
 * entry ^slicing.discriminator[+].type = #profile
 * entry ^slicing.discriminator[=].path = "act"

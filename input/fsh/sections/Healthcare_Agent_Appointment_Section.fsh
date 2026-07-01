@@ -28,7 +28,7 @@ This section contains the consent to appoint one or more healthcare agents and a
 * title 1..1
 * title ^short = "Healthcare Agent Appointment" 
 
-* text ^short = "Rendering of Healthcare Agent Appointment"
+* text ^short = "Rendering of Healthcare Agent Appointment Consent and related information"
 
 * entry 1..* MS
 //* entry ^short = "If section/@nullFlavor is not present:"

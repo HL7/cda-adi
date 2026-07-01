@@ -41,17 +41,21 @@ This section contains portable medical orders for the patient.
 
 * text ^short = "Rendering of Portable Medical Orders - Planned Procedures"
 
+* entry 1..* MS
+//* entry ^short = "If section/@nullFlavor is not present:"
+* entry ^comment = "SHALL contain at least one [1..*] entry."
+
 * entry ^slicing.discriminator[+].type = #profile
 * entry ^slicing.discriminator[=].path = "act"
 * entry ^slicing.rules = #open
-//* entry ^short = "If section/@nullFlavor is not present:"
-* entry ^comment = "SHALL contain at least one [1..*] entry."
+
 
 * entry contains 
      cardiopulmonaryResuscitationOrder 1..1 MS and
      initialTreatmentOrder 0..* MS and 
      additionalOrder 0..* MS and
-     nutritionOrder 0..1 MS
+     nutritionOrder 0..1 MS and
+     externalEntryReferenceEntry 0..1 MS
 
 * entry[cardiopulmonaryResuscitationOrder].act 1..1 MS 
 * entry[cardiopulmonaryResuscitationOrder].act only Cardiopulmonary_Resuscitation_Order_Entry
@@ -64,3 +68,6 @@ This section contains portable medical orders for the patient.
 
 * entry[nutritionOrder].act 1..1 MS 
 * entry[nutritionOrder].act only Medically_Assisted_Nutrition_Order_Entry
+
+* entry[externalEntryReferenceEntry].act 1..1 MS 
+* entry[externalEntryReferenceEntry].act only External_Entry_Reference_Entry

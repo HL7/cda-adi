@@ -29,3 +29,16 @@ This section contains treatment intervention preferences under potential future 
 * title ^short = "Treatment Intervention Preferences" 
 
 * text ^short = "Rendering of Treatment Intervention Preferences information"
+
+* entry 0..* MS
+//* entry ^short = "If section/@nullFlavor is not present:"
+* entry ^comment = "MAY contain [0..*] entry."
+
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "act"
+* entry ^slicing.rules = #open
+
+* entry contains externalEntryReferenceEntry 0..* MS
+
+* entry[externalEntryReferenceEntry].act 1..1 MS 
+* entry[externalEntryReferenceEntry].act only External_Entry_Reference_Entry
