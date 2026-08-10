@@ -3,7 +3,7 @@ Parent: EntryReference
 Id: External.Entry.Reference.Entry
 Title: "ADI External Entry Reference Entry"
 Description: """
-This entry represents the act of referencing another an external entry not include in this CDA document instance.
+This entry represents the act of referencing an external entry not include in this CDA document instance.
 """
 //* ^identifier.system = "urn:ietf:rfc:3986"
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
