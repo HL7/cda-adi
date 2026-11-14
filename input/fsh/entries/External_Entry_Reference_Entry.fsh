@@ -1,14 +1,17 @@
 Profile: External_Entry_Reference_Entry
-Parent: EntryReference
+Parent: Entry
 Id: External.Entry.Reference.Entry
 Title: "ADI External Entry Reference Entry"
 Description: """
-This entry represents the act of referencing an external entry not include in this CDA document instance.
+This entry represents the act of referencing an external entry not include in this CDA document instance. 
+It can be used as an Entry when there is no CDA entry content and the machine readable data is provided only as an external entry. 
 """
+//* Confirm this design with SDWG. */
+
 //* ^identifier.system = "urn:ietf:rfc:3986"
 //* ^identifier.value = "urn:hl7ii:2.16.840.1.113883.10.20.22.4.3:2024-05-01"
 * ^status = #draft
-//* obeys should-text-ref-value and should-author
+//* obeys should-author
 * insert LogicalModelTemplate(external-entry-reference, 2.16.840.1.113883.4.823.1.4.2.5, 2026-08-28)
 * insert NarrativeLink
 
@@ -23,7 +26,14 @@ This entry represents the act of referencing an external entry not include in th
 * id ^short = "When using a FHIR Collection Bundle for the entries, use the Resource name/Resource id as the id value. For example, 
 if the entry is a FHIR Patient resource with id 123, then the id value would be 'Condition/123'."
 
+* code 1..1
+* code ^comment = "MUST contain exactly one [1..1] code."
+* code ^short = "The code SHALL be a Hl7 code that represents the type of the external entry being referenced in terms of the FHIR resource type."
+* code from http://hl7.org/fhir/ValueSet/all-resource-types (required)
+
 * text ^short = "links to the rendering of the entry information contained in the externally referenced Resource."
+
+// If there is CDA entry content and the machine readable data is also available as a FHIR external entry, you can use the reference element in an entryRelationship to reference it.
 
 * reference 1..1
 * reference ^comment = "MUST contain exactly one [1..1] reference."
