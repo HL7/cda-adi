@@ -65,6 +65,7 @@ parameters:
 # see https://confluence.hl7.org/display/CDA/IG+Publisher+Basics+for+CDA+IG+Authors
   path-resource:
     - input/resources
+    - input/resources/examples
     - input/pagecontent
     - fsh/aliasesAndRules
     - fsh/namingSystems
@@ -75,28 +76,29 @@ parameters:
     - fsh/entries
     - fsh/invariants
     - fsh/examples 
-    - resources/examples
   autoload-resource: 'true'
   show-inherited-invariants: 'true'
 #
 # The following resources are the xml documents that are being uploaded into this IG to serve as examples.   
 #
 resources:
-  examples/ex-PersonalAdvanceCarePlanDocument2:
-    name: Person-Authored Advance Directive Example 1
+  Binary/ex-PersonalAdvanceCarePlanDocument-2:
+    name: Person-Authored Advance Directive Example 2
     description: This example illustrates a basic clinical document structure.
     isExample: true
     profile: http://hl7.org/cda/us/adi/StructureDefinition/PersonalAdvanceCarePlanDocument 
-  examples/ex-Section-PastMedicalHistory:
-    name: Past Medical History Section Example
-    description: This example illustrates a basic past medical history section structure.
-    isExample: true
-    profile: http://hl7.org/cda/us/adi/StructureDefinition/Section
-  examples/ex-Entry-Observation-Weight:
-    name: Weight Observation Entry Example
-    description: This example illustrates a basic weight observation entry structure.
-    isExample: true
-    profile: http://hl7.org/cda/us/adi/StructureDefinition/Observation
+#  examples/ex-Section-PastMedicalHistory:
+#    name: Past Medical History Section Example
+#    description: This example illustrates a basic past medical history section structure.
+#    isExample: true
+#    profile: http://hl7.org/cda/us/adi/StructureDefinition/Section
+#  examples/ex-Entry-Observation-Weight:
+#    name: Weight Observation Entry Example
+#    description: This example illustrates a basic weight observation entry structure.
+#    isExample: true
+#    profile: http://hl7.org/cda/us/adi/StructureDefinition/Observation
+
+#   
 # Option to consider regarding how to assign OIDs
 # valueSets and codeSystems should be given OIDs, this is especially required if that codeSystem or valueSet is going to be used by CDA. IHE has an OID root that is managed https://wiki.ihe.net/index.php/OID_Registration, with a branch assigned to each IHE domain. Each IHE domain should have a page where they manage assignments within their branch. an OID should be assigned to each IG, and that OID placed below so that the IG publisher will manage OID assignment to all valueSets and codeSystems defined in that IG. The IG publisher will create an ./oids.ini in the project root that will need to be checked into your github repository.
 # auto-oid-root: 1.3.6.1.4.1.19376.1.5....
@@ -226,6 +228,11 @@ groups:
       - Medically_Assisted_Nutrition_Order_Entry
       - Medically_Assisted_Nutrition_Order_Detail_Part
       - Medically_Assisted_Nutrition_Planned_Procedure_Part
+  examples:
+    name: Examples
+    description: All example-related resources
+    resources:
+      - Binary/ex-PersonalAdvanceCarePlanDocument-2
 #  Add remaining entry templates here.
 #   implementation.xml:
 #   examples.xml:

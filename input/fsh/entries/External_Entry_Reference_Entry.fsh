@@ -1,5 +1,5 @@
 Profile: External_Entry_Reference_Entry
-Parent: Entry
+Parent: $Act
 Id: External.Entry.Reference.Entry
 Title: "ADI External Entry Reference Entry"
 Description: """
