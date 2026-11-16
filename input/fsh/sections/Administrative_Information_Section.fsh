@@ -13,7 +13,7 @@ This section contains information about additional administrative data.
 // Including the 1..* may cause a validation problem.
 * templateId 1..*
 * templateId.root 1..1 
-* templateId.root = "2.16.840.1.113883.4.823.1.3.7"
+* templateId.root = "2.16.840.1.113883.4.823.1.3.11"
 * templateId.extension 1..1 
 * templateId.extension = "2026-08-28"
 
