@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<observation  xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    classCode="OBS" moodCode="EVN"><!-- Form Title Part Entry -->
+    <templateId root="2.16.840.1.113883.4.823.1.4.24.1" extension="2026-08-28"/> 
+    <code code="92183-3	" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Document type">
+        <originalText>
+            <reference value="#DocumentType"/> <!-- This is the Document type in terms of the Form Title "Name". -->
+        </originalText>
+    </code>
+    <text>
+        <reference value="#FormType"/>
+    </text>
+    <value xsi:type="ED">
+        <reference value="#FormTypeTitle"/>
+    </value>
+    <author><!-- Copyright Information -->
+        <templateId root="2.16.840.1.113883.4.823.1.4.25" extension="2026-08-28"/> 
+        <time value="2026"></time>
+        <assignedAuthor>
+            <id/>
+            <representedOrganization>
+                <name>State of Michigan, Health and Human Services</name>
+            </representedOrganization>
+        </assignedAuthor>
+    </author>
+</observation>

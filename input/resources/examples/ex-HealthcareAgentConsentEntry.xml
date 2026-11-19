@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<act xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    classCode="ACT" moodCode="EVN"><!-- CDA ADI V1.0: Healthcare Agent Consent [0..1] -->
+    <templateId root="2.16.840.1.113883.4.823.1.4.2" extension="2026-08-28"/>
+    <id extension="54D1E183-7D36-4032-8244-0DBD1FCEE86C"
+        root="2.16.840.1.113883.15.15.900.2"/>
+    <!-- This code tells you that this will map to the ADI HCA Appointment Consent entry -->
+    <code code="81377-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Goals, preferences, and priorities regarding the appointment of healthcare agents"/>
+    <text>
+        <reference value="#Consent"/>
+    </text>
+    <statusCode code="completed"/>
+    <effectiveTime value="20240313153618-0400"/>
+    <!-- This entry relationship holds the Consent.provision.action information. -->
+    <entryRelationship typeCode="COMP">
+        <observation classCode="OBS" moodCode="EVN"><!-- Powers_Granted_Part [0..*] -->
+            <templateId root="2.16.840.1.113883.4.823.1.4.2.2" extension="2026-08-28"/>
+            <code code="75786-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Powers Granted to Health Agent"> </code>
+            <text>
+                <reference value="#PermittedPowers"/>
+            </text>
+            <statusCode code="completed"/>
+            <!-- If the value information contains codes, then you have coded content; if ED (text) then you only have original text for the CodedElement in FHIR. -->
+            <value xsi:type="ED">
+                <reference value="#PermittedPowers"/>
+            </value>
+        </observation>
+    </entryRelationship>
+    <!-- This entry relationship maps to the first Consent.provision.actor.code (primary HCA) and then reference to the RelatedPerson for that role. -->
+    <entryRelationship typeCode="COMP">
+        <observation classCode="OBS" moodCode="EVN"><!-- Agent_Appointment_Part [1..3] -->
+            <templateId root="2.16.840.1.113883.4.823.1.4.2.1" extension="2026-08-28"/>
+            <code code="75783-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Primary Healthcare Agent">
+                <originalText>
+                    <reference value="#HealthAgent1Type"/>
+                </originalText>
+            </code>
+            <text>
+                <reference value="#HealthAgent1"/>
+            </text>
+            <statusCode code="completed"/>
+            <!-- Only include one date. Use Verified if known, otherwise just use appointed time. -->
+            <effectiveTime value="20231222142329-0500"/>
+            <participant typeCode="VRF">
+                <!-- Use VRF if verified and the effectiveTime above would be time when verified. -->
+                <!-- <participant typeCode="CST"> Use CST if not yet verified and the effectiveTime above would be time when appointed. -->
+                <participantRole classCode="AGNT">
+                    <id root="41791D1B-27B4-4987-9A41-D6F3DC14297E"/>
+                    <code code="SON" codeSystem="2.16.840.1.113883.5.111"
+                        codeSystemName="RoleCode" displayName="Son">
+                        <!-- These codes come from the Personal and Legal Relationship  RoleType value set. -->
+                    </code>
+                    <addr use="HP">
+                        <streetAddressLine partType="SAL">17040 E. Warren Avenue</streetAddressLine>
+                        <city partType="CTY">Detroit</city>
+                        <state partType="STA">MI</state>
+                        <postalCode partType="ZIP">48224</postalCode>
+                        <country partType="CNT">US</country>
+                    </addr>
+                    <telecom use="MC" value="tel:+15555552222"/>
+                    <telecom value="mailto:mmoen+charlesjohnson@mydirectives.com"/>
+                    <playingEntity>
+                        <code code="63161005" codeSystem="2.16.840.1.113883.6.96"
+                            codeSystemName="SNOMED CT" displayName="Principle">
+                            <originalText>
+                                <reference value="#HealthAgent1Type"/>
+                            </originalText>
+                        </code>
+                        <name>
+                            <given partType="GIV">Charles</given>
+                            <family partType="FAM">Johnson</family>
+                        </name>
+                    </playingEntity>
+                </participantRole>
+            </participant>
+        </observation>
+    </entryRelationship>
+    <!-- This entry relationship maps to the second Consent.provision.actor.code (First Alternate HCA) and then reference to the second RelatedPerson for that role. -->
+    <entryRelationship typeCode="COMP">
+        <observation classCode="OBS" moodCode="EVN"><!-- Agent_Appointment_Part [1..3] -->
+            <templateId root="2.16.840.1.113883.4.823.1.4.2.1" extension="2026-08-28"/>
+            <code code="75784-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="First Alternative Health Agent">
+                <originalText>
+                    <reference value="#HealthAgent2Type"/>
+                </originalText>
+            </code>
+            <text>
+                <reference value="#HealthAgent2"/>
+            </text>
+            <statusCode code="completed"/>
+            <effectiveTime value="20231222140924-0500"/>
+            <participant typeCode="CST">
+                <participantRole classCode="AGNT">
+                    <id root="C795F427-3271-4487-BDE9-0A22790D38F3"/>
+                    <code>
+                        <originalText language="en-US" mediaType="text/plain"
+                            >Daughter-in-law</originalText>
+                    </code>
+                    <addr use="HP">
+                        <streetAddressLine partType="SAL">17040 E. Warren Avenue</streetAddressLine>
+                        <city partType="CTY">Detroit</city>
+                        <state partType="STA">MI</state>
+                        <postalCode partType="ZIP">48224</postalCode>
+                        <country partType="CNT">US</country>
+                    </addr>
+                    <telecom use="MC" value="tel:+15555553333"/>
+                    <telecom value="mailto:mmoen+lisajohnson@mydirectives.com"/>
+                    <playingEntity>
+                        <code code="2603003" codeSystem="2.16.840.1.113883.6.96"
+                            codeSystemName="SNOMED CT" displayName="Secondary">
+                            <originalText>
+                                <reference value="#HealthAgent2Type"/>
+                            </originalText>
+                        </code>
+                        <name>
+                            <given partType="GIV">Lisa</given>
+                            <family partType="FAM">Johnson</family>
+                        </name>
+                    </playingEntity>
+                </participantRole>
+            </participant>
+        </observation>
+    </entryRelationship>
+</act>

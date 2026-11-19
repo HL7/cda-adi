@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<observation xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ classCode="OBS" moodCode="EVN"><!-- Jurisdiction Part-->
+    <templateId root="2.16.840.1.113883.4.823.1.4.24.1" extension="2026-08-28"/> 
+    <id root="2.16.840.1.113883.15.15.100.1"
+        extension="0-1d5e9110a6a64c92976a69e4a60d7cda-1749765905.81334-5.1"
+        assigningAuthorityName="MyDirectives"/>
+    <code code="101349-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Jurisdiction where advance directive document is accepted [Location]">
+        <originalText>
+            <reference value="#JurisdictionLabel"/>
+        </originalText>
+    </code>
+    <text>
+        <reference value="#Jurisdiction-Copyright"/>
+    </text>
+    <value xsi:type="CD" code="MI" codeSystem="2.16.840.1.113883.3.88.12.80.1"
+        codeSystemName="USPS State Codes" displayName="Michigan">
+        <originalText>
+            <reference value="#JurisdictionState"/>
+        </originalText>
+    </value>
+</observation>

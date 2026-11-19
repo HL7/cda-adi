@@ -1,121 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<section>
-    <!-- Payers Section -->
-    <templateId root="2.16.840.1.113883.10.20.22.2.18" extension="2015-08-01"/>
-    <templateId root="2.16.840.1.113883.10.20.22.2.18"/>
-    <id root="2.25.300482169457150407075386186229743407818.3"
-        extension="0dc06180-8961-54e1-bab4-720625abf926"
-        assigningAuthorityName="Health Services of North Texas"/>
-    <code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-        displayName="Payment sources"/>
-    <title>Payers</title>
+<act xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    classCode="ACT" moodCode="EVN"><!-- CDA ADI V1.0: External Entry Reference Entry to the Healthcare Agent Appointment Consent Entry -->
+    <templateId root="2.16.840.1.113883.4.823.1.4.2.5" extension="2026-08-28"/>
+    <id extension="54D1E183-7D36-4032-8244-0DBD1FCEE86C"
+        root="2.16.840.1.113883.15.15.900.2"/>
+    <!-- The code SHALL be a Hl7 code that represents the type of the external entry being referenced in terms of the FHIR resource type. -->
+    <code code="Consent" codeSystem="2.16.840.1.113883.4.642.4.1802" codeSystemName="fhir-types"
+        displayName="FHIRTypes"/>
     <text>
-        <table border="1" width="100%">
-            <thead>
-                <tr>
-                    <th>Date Added / Updated</th>
-                    <th>Payer</th>
-                    <th>Program Type</th>
-                    <th>Program</th>
-                    <th>Member ID</th>
-                    <th>Covered Party</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ID="coverage1">
-                    <td>3/20/2026</td>
-                    <td>Wellpoint</td>
-                    <td>MEDICAID</td>
-                    <td>Texas STAR Medicaid</td>
-                    <td>TXSTAR-MIMI-4827316</td>
-                    <td>Mimi Shell</td>
-                </tr>
-            </tbody>
-        </table>
+        <reference value="#Consent"/>
     </text>
-    <entry><!-- Keeps the original CDA Entry then adds the pointer to the alternate FHIR Entry as an entryRelationship at the bottom of the entry. -->
-        <!-- Coverage Activity -->
-        <act classCode="ACT" moodCode="EVN">
-            <templateId root="2.16.840.1.113883.10.20.22.4.60" extension="2024-05-01"/>
-            <id root="2.25.300482169457150407075386186229743407818.4" extension="f84b47aa-cadc-4a17-a0f4-96cb76765402" assigningAuthorityName="Health Services of North Texas"/>
-            <code code="52556-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payment sources"/>
-            <text>
-                <reference value="#coverage1"/>
-            </text>
-            <statusCode code="completed"/>
-            <effectiveTime value="20260216"/>
-            <entryRelationship typeCode="COMP">
-                <sequenceNumber value="1"/>
-                <!-- Policy Activity -->
-                <act classCode="ACT" moodCode="EVN">
-                    <templateId root="2.16.840.1.113883.10.20.22.4.61" extension="2024-05-01"/>
-                    <id root="2.25.300482169457150407075386186229743407818.4" extension="557fb8e2-585f-48e8-94d1-41f50ea97134" assigningAuthorityName="Health Services of North Texas"/>
-                    <!-- Medicaid -->
-                    <!-- FINDING: the Source of Payment Typology is not readily available -->
-                    <!-- https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf  Appendix A -->
-                    <code code="MC" codeSystem="2.16.840.1.113883.3.221.5" codeSystemName="Source of Payment Typology" displayName="MEDICAID"/>
-                    <statusCode code="completed"/>
-                    <!-- Payer -->
-                    <performer typeCode="PRF">
-                        <templateId root="2.16.840.1.113883.10.20.22.4.87"/>
-                        <assignedEntity>
-                            <id nullFlavor="UNK"/>
-                            <code code="PAYOR" codeSystem="2.16.840.1.113883.5.110" codeSystemName="HL7 RoleCode"/>
-                            <representedOrganization>
-                                <name>Wellpoint</name>
-                            </representedOrganization>
-                            <!-- FINDING: Missing identifier scheme for Payors - This could benefit from the GLEIF work at DirectTrust. -->
-                            <!-- If Wellpoint established a Certificate for their STAR Plan and has a Direct Address provisioned for that organization's use, the Direct address could be used as an Identifier for the Organization. -->
-                        </assignedEntity>
-                    </performer>
-                    <!-- Mimi is the covered party -->
-                    <participant typeCode="COV">
-                        <templateId root="2.16.840.1.113883.10.20.22.4.89"/>
-                        <participantRole classCode="PAT">
-                            <!-- Synthetic Medicaid Member ID -->
-                            <!-- FINDING: Root GUID for Payer Member ID's needs to be a resource we can look up easily. -->
-                            <id root="a7d4b920-58e2-4f47-9d72-3b0cf93482e1" extension="TXSTAR-MIMI-4827316" assigningAuthorityName="Wellpoint - Texas STAR"/>
-                            <sdtc:identifiedBy typeCode="REL">
-                                <sdtc:alternateIdentification classCode="IDENT">
-                                    <sdtc:id root="a7d4b920-58e2-4f47-9d72-3b0cf93482e1" extension="TXSTAR-MIMI-4827316"/>
-                                    <sdtc:code code="MA" codeSystem="2.16.840.1.113883.18.108" codeSystemName="v2-0203" displayName="Patient Medicaid number"/>
-                                </sdtc:alternateIdentification>
-                            </sdtc:identifiedBy>
-                            <code code="SELF" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" displayName="self"/>
-                            <playingEntity>
-                                <name>
-                                    <given>Mimi</given>
-                                    <family>Shell</family>
-                                </name>
-                            </playingEntity>
-                        </participantRole>
-                    </participant>
-                </act>
-            </entryRelationship>
-            <!-- This shows how to add an external reference to the FHIR alternative for this entry. -->
-            <!--<reference typeCode="REFR">
-                <templateId/>
-                <externalAct>
-                  <id root="a7d4b920-58e2-4f47-9d72-3b0cf93482e1" extension="TXSTAR-MIMI-4827316"/>
-                </externalAct>
-              </reference>-->
-        </act>
-    </entry> 
-    <!-- This shows how to completely replace the CDA entry with an alternative FHIR entry for this machine processable information. -->
-    <entry typeCode="DRIV"><!-- Completely replaces the CDA Entry with a pointer to the alternate FHIR Entry -->
-        <act classCode="ACT" moodCode="EVN">
-            <templateId root="2.16.840.1.113883.4.823.1.4.2.5" extension="2026-08-28"/>
-            <id extension="Coverage/wellpoint-star-mimi"/>
-            <code code="Coverage"/><!-- Use the codes from FHIR Resource Type -->
-            <text>
-                <reference value="#coverage1"/>
-            </text>
-            <statusCode code="completed"/>
-            <reference typeCode="REFR">
-                <externalAct>
-                    <id root="a7d4b920-58e2-4f47-9d72-3b0cf93482e1" extension="TXSTAR-MIMI-4827316"/>
-                </externalAct>
-            </reference>
-        </act>
-    </entry>
-</section>
+    <!--   <statusCode code="completed"/>-->
+    <!--    <effectiveTime value="20240313153618-0400"/>-->
+    <!-- This is the external entry reference. It references a Collection Bundle entry  within a Collection Bundle associated with this document. -->
+    <reference typeCode="REFR">
+        <externalAct classCode="ACT" moodCode="EVN">
+            <id root="2.16.840.1.113883.15.15.100.1"
+                extension="14539-1d5e9110a6a64c92976a69e4a60d8cda-1746700736222"></id>
+        </externalAct>
+    </reference>
+</act>

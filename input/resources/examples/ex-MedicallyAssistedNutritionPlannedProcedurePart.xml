@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procedure xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    classCode="PROC" moodCode="INT" negationInd="false"><!-- CDA ADI V1.0: Medically Assisted Nutrition Planned Procedure Part -->
+    <templateId root="2.16.840.1.113883.9.275.3.4.2" extension="2026-08-28"/>
+    <id root="2.16.840.1.113883.15.15.100.1"
+        extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.procedure"/>
+    <code code="LA33490-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Trial period for artificial nutrition but no surgically-placed tubes"/>
+    <text representation="TXT">
+        <reference
+            value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.procedure"
+        />
+    </text>
+    <statusCode code="active"/>
+</procedure>

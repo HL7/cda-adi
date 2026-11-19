@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- C-CDA v2.1: Planned Procedures -->
+  <!-- CDA ADI V1.0: Portable Medical Orders -->
+  <templateId root="2.16.840.1.113883.10.20.22.2.30" extension="2014-06-09"/>
+  <!-- C-CDA v2.1: Planned Procedures -->
+  <templateId root="2.16.840.1.113883.9.275.2.1" extension="2026-08-28"/>
+  <!-- CDA ADI V1: Portable Medical Orders section -->
+  <code code="59772-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+    displayName="Planned Procedure"/>
+  <title mediaType="text/plain" representation="TXT">Portable Medical Orders</title>
+  <text>
+    <paragraph> This section includes minimal structured data. Refer to the Source Form Section for
+      complete representation of the document. If additional discrete data is required, please
+      contact the document Custodian. </paragraph>
+    <table ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.medicalOrder">
+      <colgroup>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+      </colgroup>
+      <thead>
+        <tr ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.orderType">
+          <td align="left" colspan="5">
+            <content styleCode="Bold">A. Cardiopulmonary Resuscitation Orders.</content>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">Order Precondition</td>
+          <td colspan="1">Order Detail</td>
+          <td colspan="1">Procedure</td>
+          <td colspan="1">Goal</td>
+          <td colspan="1">Note(s)</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.orderPrecondition"
+            >Follow these orders if <content
+              ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.precondition1"
+              >patient has no pulse and/or is not breathing</content>.</td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.orderDetail"> No CPR:
+            Do Not Attempt Resuscitation. </td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.procedure">
+            <content styleCode="Bold"
+              ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.procedurePerform">DO
+              NOT Perform </content>
+            <content
+              ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.procedureProcedure"
+              >Cardiopulmonary Resuscitation</content>
+          </td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.goal"/>
+          <td align="left" colspan="1">
+            <list ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.notes">
+              <item ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.note1">
+                <content styleCode="Italic">May choose any option in Section B.</content>
+              </item>
+            </list>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br/>
+    <table ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.medicalOrder">
+      <colgroup>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+      </colgroup>
+      <thead>
+        <tr ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.orderType">
+          <td align="left" colspan="5">
+            <content styleCode="Bold">B. Initial Treatment Orders.</content>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">Order Precondition</td>
+          <td colspan="1">Order Detail</td>
+          <td colspan="1">Procedure</td>
+          <td colspan="1">Goal</td>
+          <td colspan="1">Note(s)</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.orderPrecondition"
+            >Follow these orders if <content
+              ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.precondition1"
+              >patient has a pulse and/or is breathing</content>.</td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.orderDetail">
+            Comfort-focused treatments </td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.procedure">
+            <content styleCode="Bold"
+              ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.procedurePerform"
+              >Perform </content>
+            <content
+              ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.procedureProcedure"
+              >Comfort-focused Treatments</content>
+          </td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.goal">Maximize comfort
+            through symptom management; allow natural death.</td>
+          <td align="left" colspan="1">
+            <list ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.notes">
+              <item ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.note1">
+                <content styleCode="Italic">Use oxygen, suction and manual treatment of airway
+                  obstruction as needed for comfort. Avoid treatments listed in full or select
+                  treatments unless consistent with comfort goal. Transfer to hospital only if
+                  comfort cannot be achieved in current setting.</content>
+              </item>
+            </list>
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colspan="5"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.instruction1">
+            <content styleCode="Italic">Reassess and discuss interventions with patient or patient
+              representative regularly to ensure treatments are meeting patient’s care goals.
+              Consider a time-trial of interventions based on goals and specific outcomes.</content>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br/>
+    <table ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.medicalOrder">
+      <colgroup>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+      </colgroup>
+      <thead>
+        <tr ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.orderType">
+          <td align="left" colspan="5">
+            <content styleCode="Bold">C.Additional Orders or Instructions.</content>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">Order Precondition</td>
+          <td colspan="1">Order Detail</td>
+          <td colspan="1">Procedure</td>
+          <td colspan="1">Goal</td>
+          <td colspan="1">Note(s)</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.orderPrecondition"/>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.orderDetail">
+            <content styleCode="Answer">Betsy wants comfort-focused care and not extensive medical
+              treatments or interventions</content>
+          </td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.procedure"> </td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.goal"/>
+          <td align="left" colspan="1">
+            <list ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.notes">
+              <item ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.note1">
+                <content styleCode="Italic">These orders are in addition to those above (e.g., blood
+                  products, dialysis).</content>
+              </item>
+            </list>
+          </td>
+        </tr>
+        <tr>
+          <td align="left" colspan="5"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.instruction1">
+            <content styleCode="Italic">EMS protocols may limit emergency responder ability to act
+              on orders in this section.</content>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br/>
+    <table ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.medicalOrder">
+      <colgroup>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+      </colgroup>
+      <thead>
+        <tr ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.orderType">
+          <td align="left" colspan="5">
+            <content styleCode="Bold">D. Medically Assisted Nutrition.</content>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">Order Precondition</td>
+          <td colspan="1">Order Detail</td>
+          <td colspan="1">Procedure</td>
+          <td colspan="1">Goal</td>
+          <td colspan="1">Note(s)</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.orderPrecondition"/>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.orderDetail"> Trial
+            period for artificial nutrition but no surgically-placed tubes </td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.procedure"> </td>
+          <td align="left" colspan="1"
+            ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.goal"/>
+          <td align="left" colspan="1">
+            <list ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.notes">
+              <item ID="e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.note1">
+                <content styleCode="Italic">Offer food by mounth if desired by patient, safe and
+                  tolerated.</content>
+              </item>
+            </list>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br/>
+  </text>
+  <entry>
+    <act classCode="ACT" moodCode="RQO">
+      <!-- CDA ADI V1.0: CardiopulmonaryResuscitationOrderEntry -->
+      <!-- The intent of the request is a directive in FHIR -->
+      <templateId root="2.16.840.1.113883.9.275.3.1" extension="2026-08-28"/>
+      <id root="2.16.840.1.113883.15.15.100.1"
+        extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.medicalOrder"/>
+      <code code="100822-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Cardiopulmonary resuscitation orders"/>
+      <!-- ServiceRequest.category -->
+      <text representation="TXT">
+        <reference
+          value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.medicalOrder"/>
+      </text>
+      <statusCode code="active"/>
+      <author>
+        <templateId root="2.16.840.1.113883.10.20.22.5.6" extension="2019-10-01"/>
+        <!-- Provenance Author -->
+        <time value="20250616122550.536-0500"/>
+        <assignedAuthor>
+          <id root="2.16.840.1.113883.15.15.600.1" extension="ca87518a8845413faca9206e5a83c08d"/>
+          <id root="2.16.840.1.113883.4.6" extension="207R00000X" assigningAuthorityName="NPPES"/>
+          <sdtc:identifiedBy typeCode="REL">
+            <sdtc:alternateIdentification classCode="IDENT">
+              <sdtc:id root="2.16.840.1.113883.4.6" extension="207R00000X"/>
+              <sdtc:code>
+                <originalText>NPPES Type-1 NPI</originalText>
+              </sdtc:code>
+            </sdtc:alternateIdentification>
+          </sdtc:identifiedBy>
+          <addr use="WP">
+            <streetAddressLine nullFlavor="NI"/>
+            <city nullFlavor="NI"/>
+            <state partType="STA">MI</state>
+            <postalCode nullFlavor="NI"/>
+            <country partType="CNT">US</country>
+          </addr>
+          <telecom value="tel:+12146745539" use="MC"/>
+          <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+            <name use="L">
+              <given partType="GIV">Hema</given>
+              <family partType="FAM">Onko</family>
+            </name>
+          </assignedPerson>
+        </assignedAuthor>
+      </author>
+      <entryRelationship typeCode="COMP">
+        <act classCode="ACT" moodCode="INT">
+          <!-- CDA ADI v1.0: OrderDetail -->
+          <templateId root="2.16.840.1.113883.9.275.3.1.1" extension="2026-08-28"/>
+          <id root="2.16.840.1.113883.15.15.100.1"
+            extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.orderDetail"/>
+          <code code="LA33471-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+            displayName="No CPR: Do Not Attempt Resuscitation."/>
+          <text representation="TXT">
+            <reference
+              value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.orderDetail"/>
+          </text>
+          <statusCode code="active"/>
+        </act>
+      </entryRelationship>
+      <entryRelationship typeCode="COMP">
+        <procedure classCode="PROC" moodCode="INT" negationInd="true">
+          <!-- CDA ADI v1.0: CPR Planned Procedure -->
+          <templateId root="2.16.840.1.113883.9.275.3.1.2" extension="2026-08-28"/>
+          <id root="2.16.840.1.113883.15.15.100.1"
+            extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.procedure"/>
+          <code code="89666000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+            displayName="Cardiopulmonary Resuscitation"/>
+          <text representation="TXT">
+            <reference
+              value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.procedure"/>
+          </text>
+          <statusCode code="active"/>
+        </procedure>
+      </entryRelationship>
+      <entryRelationship typeCode="COMP">
+        <act classCode="ACT" moodCode="INT">
+          <!-- C-CDA v2.1: Instruction Observation -->
+          <templateId root="2.16.840.1.113883.10.20.22.4.515" extension="2025-05-01"/>
+          <id root="2.16.840.1.113883.15.15.100.1"
+            extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.note1"/>
+          <code code="55752-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+            displayName="Clinical information"/>
+          <text representation="TXT">
+            <reference value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.note1"/>
+          </text>
+          <statusCode code="active"/>
+        </act>
+      </entryRelationship>
+      <precondition>
+        <criterion>
+          <text representation="TXT">
+            <reference
+              value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.1.precondition1"/>
+          </text>
+        </criterion>
+      </precondition>
+    </act>
+  </entry>
+  <entry>
+    <act classCode="ACT" moodCode="RQO">
+      <!-- CDA ADI V1.0: InitialTreatmentOrderEntry -->
+      <templateId root="2.16.840.1.113883.9.275.3.2" extension="2026-08-28"/>
+      <id root="2.16.840.1.113883.15.15.100.1"
+        extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.medicalOrder"/>
+      <code code="100823-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Initial Treatment portable medical orders"/>
+      <text representation="TXT">
+        <reference
+          value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.medicalOrder"/>
+      </text>
+      <statusCode code="active"/>
+      <author>
+        <templateId root="2.16.840.1.113883.10.20.22.5.6" extension="2019-10-01"/>
+        <time value="20250616122550.536-0500"/>
+        <assignedAuthor>
+          <id root="2.16.840.1.113883.15.15.600.1" extension="ca87518a8845413faca9206e5a83c08d"/>
+          <id root="2.16.840.1.113883.4.6" extension="207R00000X" assigningAuthorityName="NPPES"/>
+          <sdtc:identifiedBy typeCode="REL">
+            <sdtc:alternateIdentification classCode="IDENT">
+              <sdtc:id root="2.16.840.1.113883.4.6" extension="207R00000X"/>
+              <sdtc:code>
+                <originalText>NPPES Type-1 NPI</originalText>
+              </sdtc:code>
+            </sdtc:alternateIdentification>
+          </sdtc:identifiedBy>
+          <addr use="WP">
+            <streetAddressLine nullFlavor="NI"/>
+            <city nullFlavor="NI"/>
+            <state partType="STA">MI</state>
+            <postalCode nullFlavor="NI"/>
+            <country partType="CNT">US</country>
+          </addr>
+          <telecom value="tel:+12146745539" use="MC"/>
+          <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+            <name use="L">
+              <given partType="GIV">Hema</given>
+              <family partType="FAM">Onko</family>
+            </name>
+          </assignedPerson>
+        </assignedAuthor>
+      </author>
+      <entryRelationship typeCode="COMP">
+        <act classCode="ACT" moodCode="INT">
+          <!-- CDA ADI V1.0: Initial Treatment Order Detail Part -->
+          <templateId root="2.16.840.1.113883.9.275.3.2.1" extension="2026-08-28"/>
+          <id root="2.16.840.1.113883.15.15.100.1"
+            extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.orderDetail"/>
+          <code code="LA33475-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+            displayName="Comfort-focused treatments"/>
+          <text representation="TXT">
+            <reference
+              value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.orderDetail"/>
+          </text>
+          <statusCode code="active"/>
+        </act>
+      </entryRelationship>
+      <entryRelationship typeCode="COMP">
+        <procedure classCode="PROC" moodCode="INT" negationInd="false">
+          <!-- CDA ADI V1.0: Initial Treatment Planned Procedure Part -->
+          <templateId root="2.16.840.1.113883.9.275.3.2.2" extension="2026-08-28"/>
+          <id root="2.16.840.1.113883.15.15.100.1"
+            extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.procedure"/>
+          <code code="LA33475-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+            displayName="Comfort-focused treatments"/>
+          <text representation="TXT">
+            <reference
+              value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.procedure"/>
+          </text>
+          <statusCode code="active"/>
+        </procedure>
+      </entryRelationship>
+      <entryRelationship typeCode="COMP">
+        <act classCode="ACT" moodCode="INT">
+          <!-- C-CDA V2.1: Instruction Observation -->
+          <templateId root="2.16.840.1.113883.10.20.22.4.515" extension="2025-05-01"/>
+          <id root="2.16.840.1.113883.15.15.100.1"
+            extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.note1"/>
+          <code code="55752-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+            displayName="Clinical information"/>
+          <text representation="TXT">
+            <reference value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.note1"/>
+          </text>
+          <statusCode code="active"/>
+        </act>
+      </entryRelationship>
+      <precondition>
+        <criterion>
+          <text representation="TXT">
+            <reference
+              value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.precondition1"/>
+          </text>
+        </criterion>
+      </precondition>
+    </act>
+  </entry>
+  <entry>
+    <act classCode="ACT" moodCode="RQO">
+      <!-- CDA ADI V1.0: AdditionalOrderEntry -->
+      <templateId root="2.16.840.1.113883.9.275.3.3" extension="2026-08-28"/>
+      <id root="2.16.840.1.113883.15.15.100.1"
+        extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.medicalOrder"/>
+      <code code="100824-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Additional portable medical orders or instructions"/>
+      <text representation="TXT">
+        <reference
+          value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.medicalOrder"/>
+      </text>
+      <statusCode code="active"/>
+      <author>
+        <templateId root="2.16.840.1.113883.10.20.22.5.6" extension="2019-10-01"/>
+        <time value="20250616122550.536-0500"/>
+        <assignedAuthor>
+          <id root="2.16.840.1.113883.15.15.600.1" extension="ca87518a8845413faca9206e5a83c08d"/>
+          <id root="2.16.840.1.113883.4.6" extension="207R00000X" assigningAuthorityName="NPPES"/>
+          <sdtc:identifiedBy typeCode="REL">
+            <sdtc:alternateIdentification classCode="IDENT">
+              <sdtc:id root="2.16.840.1.113883.4.6" extension="207R00000X"/>
+              <sdtc:code>
+                <originalText>NPPES Type-1 NPI</originalText>
+              </sdtc:code>
+            </sdtc:alternateIdentification>
+          </sdtc:identifiedBy>
+          <addr use="WP">
+            <streetAddressLine nullFlavor="NI"/>
+            <city nullFlavor="NI"/>
+            <state partType="STA">MI</state>
+            <postalCode nullFlavor="NI"/>
+            <country partType="CNT">US</country>
+          </addr>
+          <telecom value="tel:+12146745539" use="MC"/>
+          <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+            <name use="L">
+              <given partType="GIV">Hema</given>
+              <family partType="FAM">Onko</family>
+            </name>
+          </assignedPerson>
+        </assignedAuthor>
+      </author>
+      <entryRelationship typeCode="COMP">
+        <procedure classCode="PROC" moodCode="INT">
+          <!-- CDA ADI V1.0: Additional Order Planned Procedure Part -->
+          <templateId root="2.16.840.1.113883.9.275.3.3.2" extension="2026-08-28"/>
+          <id root="2.16.840.1.113883.15.15.100.1"
+            extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.procedure"/>
+          <code nullFlavor="NI"/>
+          <text representation="TXT">
+            <reference
+              value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.3.procedure"/>
+          </text>
+          <statusCode code="active"/>
+        </procedure>
+      </entryRelationship>
+    </act>
+  </entry>
+  <entry>
+    <act classCode="ACT" moodCode="RQO">
+      <!-- CDA ADI V1.0: MedicallyAssistedNutritionOrderEntry -->
+      <templateId root="2.16.840.1.113883.9.275.3.4" extension="2026-08-28"/>
+      <id root="2.16.840.1.113883.15.15.100.1"
+        extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.medicalOrder"/>
+      <code code="100825-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Medically assisted nutrition orders"/>
+      <text representation="TXT">
+        <reference
+          value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.medicalOrder"/>
+      </text>
+      <statusCode code="active"/>
+      <author>
+        <templateId root="2.16.840.1.113883.10.20.22.5.6" extension="2019-10-01"/>
+        <time value="20250616122550.536-0500"/>
+        <assignedAuthor>
+          <id root="2.16.840.1.113883.15.15.600.1" extension="ca87518a8845413faca9206e5a83c08d"/>
+          <id root="2.16.840.1.113883.4.6" extension="207R00000X" assigningAuthorityName="NPPES"/>
+          <sdtc:identifiedBy typeCode="REL">
+            <sdtc:alternateIdentification classCode="IDENT">
+              <sdtc:id root="2.16.840.1.113883.4.6" extension="207R00000X"/>
+              <sdtc:code>
+                <originalText>NPPES Type-1 NPI</originalText>
+              </sdtc:code>
+            </sdtc:alternateIdentification>
+          </sdtc:identifiedBy>
+          <addr use="WP">
+            <streetAddressLine nullFlavor="NI"/>
+            <city nullFlavor="NI"/>
+            <state partType="STA">MI</state>
+            <postalCode nullFlavor="NI"/>
+            <country partType="CNT">US</country>
+          </addr>
+          <telecom value="tel:+12146745539" use="MC"/>
+          <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+            <name use="L">
+              <given partType="GIV">Hema</given>
+              <family partType="FAM">Onko</family>
+            </name>
+          </assignedPerson>
+        </assignedAuthor>
+      </author>
+      <entryRelationship typeCode="COMP">
+        <act classCode="ACT" moodCode="INT">
+          <!-- CDA ADI V1.0: Medically Assisted Nutrition Order Detail Part -->
+          <templateId root="2.16.840.1.113883.9.275.3.4.1" extension="2026-08-28"/>
+          <id root="2.16.840.1.113883.15.15.100.1"
+            extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.orderDetail"/>
+          <code code="LA33490-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+            displayName="Trial period for artificial nutrition but no surgically-placed tubes"/>
+          <text representation="TXT">
+            <reference
+              value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.orderDetail"/>
+          </text>
+          <statusCode code="active"/>
+        </act>
+      </entryRelationship>
+      <entryRelationship typeCode="COMP">
+        <procedure classCode="PROC" moodCode="INT" negationInd="false">
+          <!-- CDA ADI V1.0: Medically Assisted Nutrition Planned Procedure Part -->
+          <templateId root="2.16.840.1.113883.9.275.3.4.2" extension="2026-08-28"/>
+          <id root="2.16.840.1.113883.15.15.100.1"
+            extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.procedure"/>
+          <code code="LA33490-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+            displayName="Trial period for artificial nutrition but no surgically-placed tubes"/>
+          <text representation="TXT">
+            <reference
+              value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.4.procedure"/>
+          </text>
+          <statusCode code="active"/>
+        </procedure>
+      </entryRelationship>
+    </act>
+  </entry>
+</section>

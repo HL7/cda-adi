@@ -74,7 +74,7 @@ Parent: $Observation
 Id: Form.Title.Part
 Title: "Form Title Part of the ADI Source Form Entry"
 Description: """
-Sub-part of the ADI Source Form Entry. This entry part includes the form title.
+Sub-part of the ADI Source Form Entry. This entry part includes the form title and optional copyright information.
 This entry is not intended to be used as a complete clinical statement entry on its own.
 """
 //* ^identifier.system = "urn:ietf:rfc:3986"

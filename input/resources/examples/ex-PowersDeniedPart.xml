@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<observation xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    classCode="OBS" moodCode="EVN"><!-- Powers_Denied_Part [0..*] -->
+    <templateId root="2.16.840.1.113883.4.823.1.4.2.4" extension="2026-08-28"/>
+    <code code="81346-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Powers Denied for Health Agent"> </code>
+    <text>
+        <reference value="#DeniedPowers"/>
+    </text>
+    <statusCode code="completed"/>
+    <!-- If the value information contains codes, then you have coded content; if ED (text) then you only have original text for the CodedElement in FHIR. -->
+    <value xsi:type="ED">
+        <reference value="#DeniedPowers"/>
+    </value>
+</observation>

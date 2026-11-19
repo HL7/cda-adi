@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><!-- CDA ADI V1.0: Healthcare Agent Appointment Section -->
+    <templateId root="2.16.840.1.113883.4.823.1.3.3" extension="2026-08-28"/>
+    <code code="81335-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Patient Healthcare agent"/>
+    <title mediaType="text/plain" representation="TXT">Healthcare Agent Appointment</title>
+    <text>
+        <list ID="Consent">
+            <item>
+                <table ID="Permit">
+                    <tbody ID="PermittedPowers">
+                        <tr>
+                            <td> I am appointing the person or persons below as my healthcare agent and,
+                                if applicable, as my alternate healthcare agent(s), and I am granting to
+                                each of them the legal authority to make medical treatment decisions on my
+                                behalf and to consult with my physician and others. The power to make
+                                medical treatment decisions that I am granting to my healthcare agent(s) is
+                                expressly subject to, and limited by, the choices that I have expressed
+                                elsewhere in my MyDirectives Advance Care Plan™. If my medical treatment
+                                choices are not clear, I am authorizing and directing my healthcare agent to
+                                make decisions in my best interests and based on what is known of my
+                                wishes.<br/><br/> If my primary healthcare agent is unable or unwilling to
+                                make medical treatment decisions for me, or if my spouse is designated as my
+                                primary healthcare agent and our marriage is annulled, or we are divorced or
+                                legally separated, then my next choice for a healthcare agent is the first
+                                alternate and then second alternate if so named.<br/><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> My Healthcare Agent’s General Authority<br/> Subject to my medical
+                                treatment choices expressed elsewhere in this MyDirectives Advance Care
+                                Plan™ and applicable law that requires otherwise, I grant to my healthcare
+                                agent the power to make all choices and medical treatment decisions for
+                                me.<br/> Here are some specific instructions that expand or limit the powers
+                                I have just granted to my healthcare agent(s): Help choose the overall goal
+                                of treatment including:<br/> • Whether or not to try to maintain life at all
+                                costs, or<br/> • Allow a gentle or peaceful death<br/> Help choose
+                                treatments that may be offered by your doctors such as:<br/> • Breathing
+                                machines (that pump air in and out of your lungs)<br/> • Dialysis (that
+                                cleans your blood when the kidneys stop working)<br/> • Heart machines (that
+                                support or replace your heart when it no longer works)<br/> • Stomach tubes
+                                (for artificial nutrition)<br/> • Blood transfusions<br/> • Surgery<br/>
+                                Help choose where you die:<br/> • At home without hospice<br/> • At home
+                                with hospice<br/> • At a nursing home<br/> • In a hospice facility<br/> • In
+                                a hospital<br/> Help choose doctors/hospitals<br/> Arrange for your
+                                healthcare in any country or state<br/> Release your medical records<br/>
+                                Talk to your family<br/> Talk to your spiritual advisor<br/> Interpret your
+                                wishes and anything not covered by the above, including but not limited to
+                                palliative care, organ and tissue donation, etc.<br/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </item>
+            <item>
+                <table ID="HealthcareAgents">
+                    <thead>
+                        <tr>
+                            <th>Healthcare Agent Type</th>
+                            <th>Person (Relation to Patient)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ID="HealthAgent1">
+                            <td ID="HealthAgent1Type" styleCode="Bold">Primary Healthcare Agent</td>
+                            <td ID="HealthAgent1Person"> Charles Johnson (Son)<br/> 17040 E. Warren
+                                Avenue, Detroit, MI 48224<br/> (555) 555-2222<br/>
+                                mmoen+charlesjohnson@myDirectives.com<br/> [ACCEPTED to act as a healthcare
+                                agent on 12/22/2023, at 2:23 PM EST] </td>
+                        </tr>
+                        <tr ID="HealthAgent2">
+                            <td ID="HealthAgent2Type" styleCode="Bold">First Alternate Healthcare
+                                Agent</td>
+                            <td ID="HealthAgent2Person"> Lisa Johnson (Daughter-in-Law)<br/> 17040 E.
+                                Warren Avenue, Detroit, MI 48224<br/> (555) 555-3333<br/>
+                                mmoen+lisajohnson@jettelabs.com<br/> [ACCEPTED to act as a healthcare agent
+                                on 12/22/2023, at 2:24 PM EST] </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </item>
+        </list>
+    </text>
+    <!-- This one entry in the CDA will map to one entry (Consent Profile) in the Composition HCA section. -->
+    <entry typeCode="COMP">
+        <!-- The action mapps directly to the Consent Resource.   -->
+        <act classCode="ACT" moodCode="EVN"><!-- CDA ADI V1.0: Healthcare Agent Consent [0..1] -->
+            <templateId root="2.16.840.1.113883.4.823.1.4.2" extension="2026-08-28"/>
+            <id extension="54D1E183-7D36-4032-8244-0DBD1FCEE86C"
+                root="2.16.840.1.113883.15.15.900.2"/>
+            <!-- This code tells you that this will map to the ADI HCA Appointment Consent entry -->
+            <code code="81377-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Goals, preferences, and priorities regarding the appointment of healthcare agents"/>
+            <text>
+                <reference value="#Consent"/>
+            </text>
+            <statusCode code="completed"/>
+            <effectiveTime value="20240313153618-0400"/>
+            <!-- This entry relationship holds the Consent.provision.action information. -->
+            <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN"><!-- Powers_Granted_Part [0..*] -->
+                    <templateId root="2.16.840.1.113883.4.823.1.4.2.2" extension="2026-08-28"/>
+                    <code code="75786-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                        displayName="Powers Granted to Health Agent"> </code>
+                    <text>
+                        <reference value="#PermittedPowers"/>
+                    </text>
+                    <statusCode code="completed"/>
+                    <!-- If the value information contains codes, then you have coded content; if ED (text) then you only have original text for the CodedElement in FHIR. -->
+                    <value xsi:type="ED">
+                        <reference value="#PermittedPowers"/>
+                    </value>
+                </observation>
+            </entryRelationship>
+            <!-- This entry relationship maps to the first Consent.provision.actor.code (primary HCA) and then reference to the RelatedPerson for that role. -->
+            <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN"><!-- Agent_Appointment_Part [1..3] -->
+                    <templateId root="2.16.840.1.113883.4.823.1.4.2.1" extension="2026-08-28"/>
+                    <code code="75783-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                        displayName="Primary Healthcare Agent">
+                        <originalText>
+                            <reference value="#HealthAgent1Type"/>
+                        </originalText>
+                    </code>
+                    <text>
+                        <reference value="#HealthAgent1"/>
+                    </text>
+                    <statusCode code="completed"/>
+                    <!-- Only include one date. Use Verified if known, otherwise just use appointed time. -->
+                    <effectiveTime value="20231222142329-0500"/>
+                    <participant typeCode="VRF">
+                        <!-- Use VRF if verified and the effectiveTime above would be time when verified. -->
+                        <!-- <participant typeCode="CST"> Use CST if not yet verified and the effectiveTime above would be time when appointed. -->
+                        <participantRole classCode="AGNT">
+                            <id root="41791D1B-27B4-4987-9A41-D6F3DC14297E"/>
+                            <code code="SON" codeSystem="2.16.840.1.113883.5.111"
+                                codeSystemName="RoleCode" displayName="Son">
+                                <!-- These codes come from the Personal and Legal Relationship  RoleType value set. -->
+                            </code>
+                            <addr use="HP">
+                                <streetAddressLine partType="SAL">17040 E. Warren Avenue</streetAddressLine>
+                                <city partType="CTY">Detroit</city>
+                                <state partType="STA">MI</state>
+                                <postalCode partType="ZIP">48224</postalCode>
+                                <country partType="CNT">US</country>
+                            </addr>
+                            <telecom use="MC" value="tel:+15555552222"/>
+                            <telecom value="mailto:mmoen+charlesjohnson@mydirectives.com"/>
+                            <playingEntity>
+                                <code code="63161005" codeSystem="2.16.840.1.113883.6.96"
+                                    codeSystemName="SNOMED CT" displayName="Principle">
+                                    <originalText>
+                                        <reference value="#HealthAgent1Type"/>
+                                    </originalText>
+                                </code>
+                                <name>
+                                    <given partType="GIV">Charles</given>
+                                    <family partType="FAM">Johnson</family>
+                                </name>
+                            </playingEntity>
+                        </participantRole>
+                    </participant>
+                </observation>
+            </entryRelationship>
+            <!-- This entry relationship maps to the second Consent.provision.actor.code (First Alternate HCA) and then reference to the second RelatedPerson for that role. -->
+            <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN"><!-- Agent_Appointment_Part [1..3] -->
+                    <templateId root="2.16.840.1.113883.4.823.1.4.2.1" extension="2026-08-28"/>
+                    <code code="75784-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                        displayName="First Alternative Health Agent">
+                        <originalText>
+                            <reference value="#HealthAgent2Type"/>
+                        </originalText>
+                    </code>
+                    <text>
+                        <reference value="#HealthAgent2"/>
+                    </text>
+                    <statusCode code="completed"/>
+                    <effectiveTime value="20231222140924-0500"/>
+                    <participant typeCode="CST">
+                        <participantRole classCode="AGNT">
+                            <id root="C795F427-3271-4487-BDE9-0A22790D38F3"/>
+                            <code>
+                                <originalText language="en-US" mediaType="text/plain"
+                                    >Daughter-in-law</originalText>
+                            </code>
+                            <addr use="HP">
+                                <streetAddressLine partType="SAL">17040 E. Warren Avenue</streetAddressLine>
+                                <city partType="CTY">Detroit</city>
+                                <state partType="STA">MI</state>
+                                <postalCode partType="ZIP">48224</postalCode>
+                                <country partType="CNT">US</country>
+                            </addr>
+                            <telecom use="MC" value="tel:+15555553333"/>
+                            <telecom value="mailto:mmoen+lisajohnson@mydirectives.com"/>
+                            <playingEntity>
+                                <code code="2603003" codeSystem="2.16.840.1.113883.6.96"
+                                    codeSystemName="SNOMED CT" displayName="Secondary">
+                                    <originalText>
+                                        <reference value="#HealthAgent2Type"/>
+                                    </originalText>
+                                </code>
+                                <name>
+                                    <given partType="GIV">Lisa</given>
+                                    <family partType="FAM">Johnson</family>
+                                </name>
+                            </playingEntity>
+                        </participantRole>
+                    </participant>
+                </observation>
+            </entryRelationship>
+        </act>
+    </entry>
+</section>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<act xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    classCode="ACT" moodCode="RQO"><!-- InitialTreatmentOrderEntry -->
+    <templateId root="2.16.840.1.113883.9.275.3.2" extension="2026-08-28"/> 
+    <id root="2.16.840.1.113883.15.15.100.1"
+        extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.medicalOrder"/>
+    <code code="100823-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Initial Treatment portable medical orders"/>
+    <text representation="TXT">
+        <reference
+            value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.medicalOrder"
+        />
+    </text>
+    <statusCode code="active"/>
+    <author>
+        <templateId root="2.16.840.1.113883.10.20.22.5.6" extension="2019-10-01"/>
+        <time value="20250616122550.536-0500"/>
+        <assignedAuthor>
+            <id root="2.16.840.1.113883.15.15.600.1"
+                extension="ca87518a8845413faca9206e5a83c08d"/>
+            <id root="2.16.840.1.113883.4.6" extension="207R00000X"
+                assigningAuthorityName="NPPES"/>
+            <sdtc:identifiedBy typeCode="REL">
+                <sdtc:alternateIdentification classCode="IDENT">
+                    <sdtc:id root="2.16.840.1.113883.4.6" extension="207R00000X"/>
+                    <sdtc:code>
+                        <originalText>NPPES Type-1 NPI</originalText>
+                    </sdtc:code>
+                </sdtc:alternateIdentification>
+            </sdtc:identifiedBy>
+            <addr use="WP">
+                <streetAddressLine nullFlavor="NI"/>
+                <city nullFlavor="NI"/>
+                <state partType="STA">MI</state>
+                <postalCode nullFlavor="NI"/>
+                <country partType="CNT">US</country>
+            </addr>
+            <telecom value="tel:+12146745539" use="MC"/>
+            <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+                <name use="L">
+                    <given partType="GIV">Hema</given>
+                    <family partType="FAM">Onko</family>
+                </name>
+            </assignedPerson>
+        </assignedAuthor>
+    </author>
+    <entryRelationship typeCode="COMP">
+        <act classCode="ACT" moodCode="INT"><!-- CDA ADI V1.0: Initial Treatment Order Detail Part -->
+            <templateId root="2.16.840.1.113883.9.275.3.2.1" extension="2026-08-28"/> 
+            <id root="2.16.840.1.113883.15.15.100.1"
+                extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.orderDetail"/>
+            <code code="LA33475-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Comfort-focused treatments"/>
+            <text representation="TXT">
+                <reference
+                    value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.orderDetail"
+                />
+            </text>
+            <statusCode code="active"/>
+        </act>
+    </entryRelationship>
+    <entryRelationship typeCode="COMP">
+        <procedure classCode="PROC" moodCode="INT" negationInd="false"> <!-- CDA ADI V1.0: Initial Treatment Planned Procedure Part -->
+            <templateId root="2.16.840.1.113883.9.275.3.2.2" extension="2026-08-28"/> 
+            <id root="2.16.840.1.113883.15.15.100.1"
+                extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.procedure"/>
+            <code code="LA33475-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Comfort-focused treatments"/>
+            <text representation="TXT">
+                <reference
+                    value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.procedure"
+                />
+            </text>
+            <statusCode code="active"/>
+        </procedure>
+    </entryRelationship>
+    <entryRelationship typeCode="COMP">
+        <act classCode="ACT" moodCode="INT"><!-- C-CDA V2.1: Instruction Observation -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.515" extension="2025-05-01"/> 
+            <id root="2.16.840.1.113883.15.15.100.1"
+                extension="14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.note1"/>
+            <code code="55752-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Clinical information"/>
+            <text representation="TXT">
+                <reference
+                    value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.note1"/>
+            </text>
+            <statusCode code="active"/>
+        </act>
+    </entryRelationship>
+    <precondition>
+        <criterion>
+            <text representation="TXT">
+                <reference
+                    value="#e14539-1d5e9110a6a64c92976a69e4a60d7cda-1750106336.59772-4.2.precondition1"
+                />
+            </text>
+        </criterion>
+    </precondition>
+</act>
