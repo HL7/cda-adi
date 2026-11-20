@@ -91,3 +91,9 @@ This entry is not intended to be used as a complete clinical statement entry on 
 * value ^short = "The title of the form"
 
 //* Need to add the author constraints for the Copyright date and holder name.
+* author 0..1 MS
+* author ^comment = "author.assignedAuthor.representedOrganization.name may include the name of the organization holding the copyright for the form."
+* author.time 0..1 MS
+* author.time ^short = "The date of the copyright for the form"
+* author.assignedAuthor.representedOrganization.name 0..1 MS
+* author.assignedAuthor.representedOrganization.name ^short = "The name of the organization holding the copyright for the form"

@@ -82,11 +82,11 @@ parameters:
 # The following resources are the xml documents that are being uploaded into this IG to serve as examples.   
 #
 resources:
-  Binary/ex-PersonalAdvanceCarePlanDocument-2:
+  Binary/ex-PersonalACPDocument-2:
     name: Person-Authored Advance Directive Example 2
     description: This example illustrates a basic clinical document structure.
     isExample: true
-    profile: http://hl7.org/cda/us/adi/StructureDefinition/PersonalAdvanceCarePlanDocument 
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/PersonalACPDocument 
 #  examples/ex-Section-PastMedicalHistory:
 #    name: Past Medical History Section Example
 #    description: This example illustrates a basic past medical history section structure.
@@ -232,7 +232,7 @@ groups:
     name: Examples
     description: All example-related resources
     resources:
-      - Binary/ex-PersonalAdvanceCarePlanDocument-2
+      - Binary/ex-PersonalACPDocument-2
 #  Add remaining entry templates here.
 #   implementation.xml:
 #   examples.xml:
