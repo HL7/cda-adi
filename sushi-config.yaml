@@ -82,22 +82,176 @@ parameters:
 # The following resources are the xml documents that are being uploaded into this IG to serve as examples.   
 #
 resources:
+  Binary/ex-PersonalACPDocument-1:
+    name: Person-Authored Advance Directive Example 1
+    description: Patient-authored advance healthcare directive document with a primary and alternative health agent appointed and other sections with untemplated Structured Data.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/PersonalACPDocument 
+  Binary/ex-SourceFormSection-1:
+    name: Source Form Section Example 1
+    description: This example illustrates a basic source form section structure with a complete source form entry.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/SourceFormSection
+  Binary/ex-Source.Form.Entry-1:
+    name: Source Form Entry Example 1
+    description: Source Form Entry with completion date, Jurisdiction and Title.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/Source.Form.Entry
+  Binary/ex-Jurisdiction.Part:
+    name: Jurisdiction Part Example
+    description: The Jurisdiction Entry carries the relevant state estblished as the jurisdiction for the document, Form Title and Copyright Date and Organization.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/Jurisdiction.Part
+  Binary/ex-Form.Title.Part:
+    name: Form Title Part Example
+    description: The Form Title Entry carries the relevant title of the form and the copyright date and organization.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/Form.Title.Part
+  Binary/ex-HealthcareAgentAppointmentSection-1:
+    name: Healthcare Agent Appointment Section Example 1
+    description: This example illustrates a basic healthcare agent appointment section structure with a complete healthcare agent consent entry.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/HealthcareAgentAppointmentSection
+  Binary/ex-HealthcareAgentConsent.Entry:
+    name: Healthcare Agent Consent Entry Example
+    description: This example illustrates a basic healthcare agent consent entry structure with a complete agent appointment part.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/HealthcareAgentConsent.Entry
+  Binary/ex-AgentAppointmentPart:
+    name: Agent Appointment Part Example
+    description: This example illustrates a basic agent appointment part structure with a complete coded powers granted part.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/AgentAppointmentPart
+  Binary/ex-CodedPowersGrantedPart:
+    name: Coded Powers Granted Part Example
+    description: This example illustrates a basic coded powers granted part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/CodedPowersGrantedPart
+  Binary/ex-PowersGrantedPart:
+    name: Powers Granted Part Example
+    description: This example illustrates a basic powers granted part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/PowersGrantedPart
+  Binary/ex-PowersDeniedPart:
+    name: Powers Denied Part Example
+    description: This example illustrates a basic powers denied part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/PowersDeniedPart
+  Binary/ex-ExternalEntryReferenceEntry:
+    name: External Entry Reference Example
+    description: This example illustrates a basic external entry reference structure that points to an external FHIR entry.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/ExternalEntryReferenceEntry
+  Binary/ex-AdministrativeInformationSection-1:
+    name: Administrative Information Section Example 1
+    description: This example illustrates a basic administrative information section structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/AdministrativeInformationSection
+  Binary/ex-CompletionInformationSection-1:
+    name: Completion Information Section Example 1
+    description: This example illustrates a basic completion information section structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/CompletionInformationSection
+  Binary/ex-CareExperiencePreferencesSection-1:
+    name: Care Experience Preferences Section Example 1
+    description: This example illustrates a basic care experience preferences section structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/CareExperiencePreferencesSection
+  Binary/ex-TreatmentInterventionPreferencesSection-1:
+    name: Treatment Intervention Preferences Section Example 1
+    description: This example illustrates a basic treatment intervention preferences section structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/TreatmentInterventionPreferencesSection
+  Binary/ex-UponDeathPreferencesSection-1:
+    name: Upon Death Preferences Section Example 1
+    description: This example illustrates a basic upon death preferences section structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/UponDeathPreferencesSection
+  Binary/ex-WitnessAndNotarySection-1:
+    name: Witness and Notary Section Example 1
+    description: This example illustrates a basic witness and notary section structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/WitnessAndNotarySection
+  Binary/ex-AdditionalDocumentationSection-1:
+    name: Additional Documentation Section Example 1
+    description: This example illustrates a basic additional documentation section structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/AdditionalDocumentationSection
   Binary/ex-PersonalACPDocument-2:
     name: Person-Authored Advance Directive Example 2
     description: This example illustrates a basic clinical document structure.
     isExample: true
     profile: http://hl7.org/cda/us/adi/StructureDefinition/PersonalACPDocument 
-#  examples/ex-Section-PastMedicalHistory:
-#    name: Past Medical History Section Example
-#    description: This example illustrates a basic past medical history section structure.
-#    isExample: true
-#    profile: http://hl7.org/cda/us/adi/StructureDefinition/Section
-#  examples/ex-Entry-Observation-Weight:
-#    name: Weight Observation Entry Example
-#    description: This example illustrates a basic weight observation entry structure.
-#    isExample: true
-#    profile: http://hl7.org/cda/us/adi/StructureDefinition/Observation
-
+  Binary/ex-SourceFormSection-2:
+    name: Source Form Section Example 2
+    description: This example illustrates a basic source form section structure with a source form entry that only contains the source form and completion date.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/SourceFormSection
+  Binary/ex-PortableMedicalOrdersDocument-1:
+    name: Provider-Authored Advance Directive Example 1
+    description: This example illustrates a basic clinical document structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/PolstPortableMedicalOrdersDocument
+  Binary/ex-PlannedProceduresPMOSection-1:
+    name: Planned Procedures PMO Section Example 1
+    description: This example illustrates a basic planned procedures PMO section structure with a complete cardiopulmonary resuscitation order entry, initial treatment order entry, additional order entry, and medically assisted nutrition order entry.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/PlannedProceduresPMOSection
+  Binary/ex-CardiopulmonaryResuscitationOrderEntry:
+    name: Cardiopulmonary Resuscitation Order Entry Example
+    description: This example illustrates a basic cardiopulmonary resuscitation order entry structure with a complete CPR order detail part and CPR planned procedure part.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/CardiopulmonaryResuscitationOrderEntry
+  Binary/ex-CPROrderDetailPart:
+    name: CPR Order Detail Part Example
+    description: This example illustrates a basic CPR order detail part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/CPROrderDetailPart
+  Binary/ex-CPRPlannedProcedurePart:
+    name: CPR Planned Procedure Part Example
+    description: This example illustrates a basic CPR planned procedure part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/CPRPlannedProcedurePart
+  Binary/ex-InitialTreatmentOrderEntry:
+    name: Initial Treatment Order Entry Example
+    description: This example illustrates a basic initial treatment order entry structure with a complete initial treatment order detail part and initial treatment planned procedure part.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/InitialTreatmentOrderEntry
+  Binary/ex-InitialTreatmentOrderDetailPart:
+    name: Initial Treatment Order Detail Part Example
+    description: This example illustrates a basic initial treatment order detail part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/InitialTreatmentOrderDetailPart
+  Binary/ex-InitialTreatmentPlannedProcedurePart:
+    name: Initial Treatment Planned Procedure Part Example
+    description: This example illustrates a basic initial treatment planned procedure part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/InitialTreatmentPlannedProcedurePart
+  Binary/ex-AdditionalOrderEntry:
+    name: Additional Order Entry Example
+    description: This example illustrates a basic additional order entry structure with a complete additional order planned procedure part.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/AdditionalOrderEntry
+  Binary/ex-AdditionalOrderPlannedProcedurePart:
+    name: Additional Order Planned Procedure Part Example
+    description: This example illustrates a basic additional order planned procedure part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/AdditionalOrderPlannedProcedurePart
+  Binary/ex-MedicallyAssistedNutritionOrderEntry:
+    name: Medically Assisted Nutrition Order Entry Example
+    description: This example illustrates a basic medically assisted nutrition order entry structure with a complete medically assisted nutrition order detail part and medically assisted nutrition planned procedure part.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/MedicallyAssistedNutritionOrderEntry
+  Binary/ex-MedicallyAssistedNutritionOrderDetailPart:
+    name: Medically Assisted Nutrition Order Detail Part Example
+    description: This example illustrates a basic medically assisted nutrition order detail part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/MedicallyAssistedNutritionOrderDetailPart
+  Binary/ex-MedicallyAssistedNutritionPlannedProcedurePart:
+    name: Medically Assisted Nutrition Planned Procedure Part Example
+    description: This example illustrates a basic medically assisted nutrition planned procedure part structure.
+    isExample: true
+    profile: http://hl7.org/cda/us/adi/StructureDefinition/MedicallyAssistedNutritionPlannedProcedurePart
 #   
 # Option to consider regarding how to assign OIDs
 # valueSets and codeSystems should be given OIDs, this is especially required if that codeSystem or valueSet is going to be used by CDA. IHE has an OID root that is managed https://wiki.ihe.net/index.php/OID_Registration, with a branch assigned to each IHE domain. Each IHE domain should have a page where they manage assignments within their branch. an OID should be assigned to each IG, and that OID placed below so that the IG publisher will manage OID assignment to all valueSets and codeSystems defined in that IG. The IG publisher will create an ./oids.ini in the project root that will need to be checked into your github repository.
@@ -232,15 +386,41 @@ groups:
     name: Examples
     description: All example-related resources
     resources:
+      - Binary/ex-PersonalACPDocument-1
+      - Binary/ex-SourceFormSection-1
+      - Binary/ex-Source.Form.Entry-1
+      - Binary/ex-Jurisdiction.Part
+      - Binary/ex-Form.Title.Part
+      - Binary/ex-HealthcareAgentAppointmentSection-1
+      - Binary/ex-HealthcareAgentConsent.Entry
+      - Binary/ex-AgentAppointmentPart
+      - Binary/ex-PowersGrantedPart
+      - Binary/ex-CodedPowersGrantedPart
+      - Binary/ex-PowersDeniedPart
+      - Binary/ex-ExternalEntryReferenceEntry
+      - Binary/ex-AdministrativeInformationSection-1
+      - Binary/ex-CompletionInformationSection-1
+      - Binary/ex-CareExperiencePreferencesSection-1
+      - Binary/ex-TreatmentInterventionPreferencesSection-1
+      - Binary/ex-UponDeathPreferencesSection-1
+      - Binary/ex-WitnessAndNotarySection-1
+      - Binary/ex-AdditionalDocumentationSection-1
       - Binary/ex-PersonalACPDocument-2
-#  Add remaining entry templates here.
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
-#
-#
+      - Binary/ex-SourceFormSection-2
+      - Binary/ex-PortableMedicalOrdersDocument-1
+      - Binary/ex-PlannedProceduresPMOSection-1
+      - Binary/ex-CardiopulmonaryResuscitationOrderEntry
+      - Binary/ex-CPROrderDetailPart
+      - Binary/ex-CPRPlannedProcedurePart
+      - Binary/ex-InitialTreatmentOrderEntry
+      - Binary/ex-InitialTreatmentOrderDetailPart
+      - Binary/ex-InitialTreatmentPlannedProcedurePart
+      - Binary/ex-AdditionalOrderEntry
+      - Binary/ex-AdditionalOrderPlannedProcedurePart
+      - Binary/ex-MedicallyAssistedNutritionOrderEntry
+      - Binary/ex-MedicallyAssistedNutritionOrderDetailPart
+      - Binary/ex-MedicallyAssistedNutritionPlannedProcedurePart
+
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │

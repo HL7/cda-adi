@@ -21,11 +21,23 @@ If the form is copyrighted by an organization, the organization's name may be in
 * id 1..*
 * id ^comment = "MUST contain at least one [1..*] id."
 
+// These are not needed because they are already constrained in CDA-core-sd structureDefinition for ObservationMedia
+// They are included here for clarity and to provide additional documentation for implementers.
+// Also note the ClinicalDocument.effectiveTime should be set to the same date as the effectiveTime/low in this clinical statement pattern.
+// ClinicalDocument.effectiveTime may also include a time component, but this should include the timezone offset for the time. 
+* effectiveTime 1..1
+* effectiveTime ^comment = "SHALL contain exactly one [1..1] effectiveTime."
+* effectiveTime ^short = "The date the form was completed and expiration date if applicable."
+* effectiveTime.low 1..1 MS
+* effectiveTime.low ^short = "The date and time this version of the form was completed."
+* effectiveTime.low pattern = "yyyyMMdd"
+* effectiveTime.high 0..1
+* effectiveTime.high ^short = "The datethe form is set to expire."
+* effectiveTime.high ^comment = "SHALL contain at most one [0..1] high. If present, the high SHALL be greater than the low."
+* effectiveTime.high ^pattern = "yyyyMMdd"
+
 * value.mediaType 1..1
 * value.mediaType = $mediaType#application/pdf
-
-* author MS
-* author ^comment = "author.assignedAuthor.representedOrganization.name may include the name of the organization holding the copyright for the form."
 
 * entryRelationship MS 
 * entryRelationship ^slicing.discriminator[+].type = #profile
