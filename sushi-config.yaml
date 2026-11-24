@@ -277,15 +277,9 @@ menu:
     Document Lifecycle Management: document_lifecycle_management.html
     Document Category - Advance Healthcare Directive: document_category_ahd.html
     Document Reference: document_reference.html
-  Person-Authored:
-    Person Authored Document Workflow: person_authored_document_workflow.html
-    Personal Advance Care Plan (PACP) Documents: pacp_documents.html
-    Mental Health Advance Directive (MHAD) Documents: mhad_documents.html
-  Provider-Authored:
-    Provider Authored Document Workflow: provider_authored_document_workflow.html
-    POLST/Portable Medical Order (PMO) Documents: pmo_documents.html
   Artifacts: artifacts.html
   Download and Analysis: download.html
+  Version History: version_history.html
   Looking Ahead: looking_ahead.html
 #  
 #
@@ -319,16 +313,6 @@ pages:
     title: Document Category - Advance Healthcare Directive
   document_reference.md:
     title: Document Reference
-  person_authored_document_workflow.md:
-    title: Person Authored Document Workflow
-  pacp_documents.md:
-    title: Personal Advance Care Plan (PACP) Documents
-  mhad_documents.md:
-    title: Mental Health Advance Directive (MHAD) Documents
-  provider_authored_document_workflow.md:
-    title: Provider Authored Document Workflow
-  pmo_documents.md:
-    title: POLST/Portable Medical Orders (PMOD) Documents
   download.md:
     title: Download and Analysis
   looking_ahead.md:
